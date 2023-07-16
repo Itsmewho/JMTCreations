@@ -22,9 +22,12 @@ import RandomScreen from "./screens/RandomScreen";
 import PopAnimeScreen from "./screens/PopAnimeScreen";
 import FullbodyScreen from "./screens/FullbodyScreen";
 import ExpressionScreen from "./screens/ExpressionScreen";
-import PortraitDetailScreen from "./screens/PortraitDetailScreen";
 import PopDetailScreen from "./screens/PopDetailScreen";
 import FullbodyDetailScreen from "./screens/FullbodyDetailScreen";
+import PortraitDetailScreen from "./screens/PortraitDetailScreen";
+import WaterColorDetailScreen from "./screens/WaterColorsDetailScreen";
+import ExpressionDetailScreen from "./screens/ExpressionDetailScreen";
+import RandomDetailScreen from "./screens/RandomDetailsScreen";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -41,9 +44,18 @@ const router = createBrowserRouter(
       <Route path="/PopAnime" element={<PopAnimeScreen />} />
       <Route path="/Fullbody" element={<FullbodyScreen />} />
       <Route path="/Expression" element={<ExpressionScreen />} />
-      <Route path="/product/:id" element={<PortraitDetailScreen />} />
       <Route path="/product/popanime/:id" element={<PopDetailScreen />} />
-      <Route path="/fullbody/:id" element={<FullbodyDetailScreen />} />
+      <Route path="/product/fullbody/:id" element={<FullbodyDetailScreen />} />
+      <Route path="/product/portrait/:id" element={<PortraitDetailScreen />} />
+      <Route
+        path="/product/watercolors/:id"
+        element={<WaterColorDetailScreen />}
+      />
+      <Route
+        path="/product/expression/:id"
+        element={<ExpressionDetailScreen />}
+      />
+      <Route path="/product/random/:id" element={<RandomDetailScreen />} />
     </Route>
   )
 );

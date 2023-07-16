@@ -36,22 +36,22 @@ const Header = () => {
           <ul className={isActive ? "navigation" : "navigation-open"}>
             <Link to="/BlogPage">
               <li>
-                <a className="text-white fs-mobile">Blog</a>
+                <button className="text-white fs-mobile">Blog</button>
               </li>
             </Link>
             <li>
               <Link to="/Shop">
-                <a className=" text-white fs-mobile">Shop</a>
+                <button className=" text-white fs-mobile">Shop</button>
               </Link>
             </li>
             <Link to="/Login">
               <li>
-                <a className=" text-white fs-mobile">Login</a>
+                <button className=" text-white fs-mobile">Login</button>
               </li>
             </Link>
             <Link to="/Cart">
               <li className="shake">
-                <a className=" text-white fs-mobile text-shadow">
+                <button className=" text-white fs-mobile text-shadow">
                   <img
                     onMouseOver={() => setOver(true)}
                     onMouseOut={() => setOver(false)}
@@ -60,7 +60,7 @@ const Header = () => {
                     loading="lazy"
                     alt="Shopping-cart icon"
                   />
-                </a>
+                </button>
               </li>
             </Link>
           </ul>

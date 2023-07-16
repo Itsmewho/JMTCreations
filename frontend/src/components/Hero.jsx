@@ -40,9 +40,9 @@ const Hero = () => {
           </p>
           <div className="button-hero flex">
             <Link to="/Shop">
-              <a className="main-button bg-green  letter-spacing uppercase shake">
+              <button className="main-button bg-green  letter-spacing uppercase shake">
                 Shop
-              </a>
+              </button>
             </Link>
           </div>
         </div>

@@ -19,13 +19,15 @@
   padding-bottom: 0;
   margin: 0;
 }
-.navigation-open a {
+.navigation-open button {
   position: relative;
   text-decoration: none;
+  border: none;
+  background: transparent;
   margin-inline-end: 1em;
   letter-spacing: 2px;
 }
-.navigation-open a:hover {
+.navigation-open button:hover {
   color: var(--clr-brown);
   transition: 3ms ease-in-out;
 }
@@ -33,13 +35,15 @@
   display: none;
   margin-top: -5px;
 }
-.navigation a {
+.navigation button {
   position: relative;
+  background: transparent;
+  border: none;
   text-decoration: none;
   margin-inline-end: 1em;
   letter-spacing: 2px;
 }
-.navigation a:hover {
+.navigation button:hover {
   color: var(--clr-brown);
   transition: 3ms ease-in-out;
 }
