@@ -13,7 +13,7 @@ import random from "../assets/random.jpg";
 
 const CategoryScreen = () => {
   return (
-    <section className="section-cat">
+    <section className="section">
       <div className="grid-container">
         <div className="category-grid">
           <Link to="/Portraits">

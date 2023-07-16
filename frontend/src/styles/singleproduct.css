@@ -1,0 +1,21 @@
+/** @format */
+
+.section-single {
+  margin: 0 6%;
+}
+
+.single-container {
+  display: flex;
+  margin-top: 2em;
+  margin-bottom: 7em;
+  justify-content: space-between;
+}
+.button-container {
+  padding: 1em;
+}
+.product-container {
+  margin-top: 7em;
+}
+.top-content {
+  max-width: 50%;
+}

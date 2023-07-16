@@ -1,0 +1,15 @@
+{
+  "name": "jmtcreations",
+  "version": "1.0.0",
+  "description": "Full Stack ecommerce",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "author": "Jordy Tromp",
+  "license": "SEE LICENSE IN <License>",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
