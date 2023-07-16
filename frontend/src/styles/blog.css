@@ -1,0 +1,161 @@
+/** @format */
+
+.section-3 {
+  background: var(--clr-dark-blue);
+  padding-top: 5em;
+}
+
+.blog-title {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 18%;
+  margin-bottom: 0.3em;
+}
+.background {
+  background: linear-gradient(
+    90deg,
+    hsl(205, 50%, 15%) 50%,
+    hsl(204, 49%, 10%) 50%
+  );
+}
+
+.intro-blog-layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 6%;
+}
+.blog-short-text {
+  max-width: 33%;
+  max-width: 33%;
+}
+
+.blog-intro-paragraph {
+  margin-bottom: 1em;
+}
+
+.blog-intro-image {
+  max-width: 27%;
+  margin-top: -12em;
+}
+
+.blog-middle-image {
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.popular-post-section {
+  width: 35%;
+}
+
+.short-text {
+  width: 100%;
+  padding: 1em;
+}
+.artikel-image:hover {
+  border-radius: 10px;
+  background-color: var(--clr-dark-blue);
+  transition: 0.3s ease-in-out;
+}
+
+.artikel-intro-img {
+  width: 130px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0.5em;
+  margin-right: 2em;
+}
+
+.blog-button {
+  padding: 0.2em 1em;
+  margin-right: 2em;
+}
+
+.blog-btn-layout {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 3em;
+}
+
+.toggle-btn {
+  border: none;
+  margin: 1em;
+  border-radius: 25px;
+  padding: 0.3em 1.3em;
+  background-color: var(--clr-green);
+  color: var(--clr-rich-black);
+}
+
+.toggle-btn:hover {
+  background-color: var(--clr-brown);
+  color: var(--clr-white);
+}
+
+@media (max-width: 1250px) {
+  .blog-title {
+    margin-right: 13%;
+  }
+  .intro-blog-layout {
+    padding: 0em 3%;
+  }
+  .blog-intro-image {
+    margin-top: -6em;
+  }
+  .short-text {
+    display: flex;
+  }
+  .blog-button {
+    display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .blog-title {
+    display: none;
+  }
+  .popular-post-section {
+    display: none;
+  }
+  .intro-blog-layout {
+    justify-content: space-around;
+  }
+  .blog-intro-image {
+    margin-top: -1em;
+    rotate: 5deg;
+  }
+}
+
+@media (max-width: 700px) {
+  .intro-blog-layout {
+    width: 100%;
+    padding: 0;
+    display: grid;
+  }
+
+  .blog-short-text {
+    min-width: 90%;
+    text-align: center;
+    margin: 1.5em auto 1.5em;
+    order: 2;
+  }
+  .blog-intro-image {
+    margin: 0 auto;
+    order: 1;
+  }
+  .blog-middle-image {
+    border-radius: 10px;
+    height: 250px;
+    min-width: 150px;
+    cursor: pointer;
+  }
+}
+@media (max-width: 300px) {
+  .blog-intro-image {
+    margin-right: 9em;
+  }
+}

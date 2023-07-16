@@ -1,0 +1,14 @@
+.footer {
+    background-color: black;
+    vertical-align: middle;
+    height: 10em;
+  }
+  
+  .container{
+      display: flex;
+      justify-content: space-between;
+      padding: 2em 6%;
+  }
+  .social{
+      padding-right: .5em;
+  }

@@ -1,0 +1,122 @@
+/** @format */
+
+.primary-header {
+  justify-content: space-between;
+  background: var(--clr-rich-black);
+  padding: 1.5em 6%;
+}
+.navigation {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+.navigation-open {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+.navigation-open a {
+  position: relative;
+  text-decoration: none;
+  margin-inline-end: 1em;
+  letter-spacing: 2px;
+}
+.navigation-open a:hover {
+  color: var(--clr-brown);
+  transition: 3ms ease-in-out;
+}
+.mobile-nav-toggle {
+  display: none;
+  margin-top: -5px;
+}
+.navigation a {
+  position: relative;
+  text-decoration: none;
+  margin-inline-end: 1em;
+  letter-spacing: 2px;
+}
+.navigation a:hover {
+  color: var(--clr-brown);
+  transition: 3ms ease-in-out;
+}
+.icons {
+  width: 2.4rem;
+  padding-top: 0.33em;
+}
+.icons:hover {
+  width: 2.5rem;
+}
+
+.border-round {
+  border: 4px solid var(--clr-brown);
+  border-radius: 50px;
+  padding: 0 0.5em 3px;
+}
+.border-round:hover {
+  color: var(--clr-white);
+  transition: transform 0.4s ease-in-out;
+}
+
+.hamburger {
+  position: sticky;
+  color: var(--clr-white);
+}
+
+@media (max-width: 650px) {
+  .navigation {
+    display: flex;
+    position: fixed;
+    z-index: 500;
+    inset: 0 0 0 0%;
+    flex-direction: column;
+    top: -5rem;
+    align-items: center;
+    background: hsla(178, 100%, 49%, 0.243);
+    backdrop-filter: blur(15px);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.533);
+    justify-content: space-evenly;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .navigation-open {
+    display: flex;
+    position: fixed;
+    z-index: 500;
+    inset: 0 0 0 0%;
+    flex-direction: column;
+    top: -5rem;
+    align-items: center;
+    background: hsla(178, 100%, 62%, 0.243);
+    backdrop-filter: blur(15px);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.403);
+    justify-content: space-evenly;
+    transform: translateY(0%);
+    transition: transform 0.5s ease-in-out;
+  }
+  .navigation-open a {
+    font-size: 5rem;
+    margin-inline-end: 0.1em;
+  }
+  .icons {
+    height: 7rem;
+    width: 7rem;
+  }
+  .icons:hover {
+    width: 7rem;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    z-index: 2000;
+    right: 6%;
+    border: 0;
+    cursor: pointer;
+  }
+}
