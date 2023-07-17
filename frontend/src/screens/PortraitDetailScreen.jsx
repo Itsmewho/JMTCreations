@@ -3,7 +3,6 @@
 import React from "react";
 import "../styles/singleproduct.css";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
 import abstract from "../abstract.js";
 import Tilt from "react-parallax-tilt";
 import Accordion from "../components/Accordion";
@@ -26,11 +25,13 @@ const PortraitDetailScreen = () => {
         <div className="top-section flex">
           <div className="image-container box-shadow">
             <Tilt titlReverse={true}>
-              <img
-                className="single-image"
-                src={abstracts.image}
-                alt={abstracts.alt}
-              />
+              <picture className="single-image">
+                <source srcSet={abstracts.imagelong} media="(min-width: 1250px" />
+                <img className="single-image"
+                  src={abstracts.image}
+                  alt={abstracts.alt}
+                />
+              </picture>
             </Tilt>
           </div>
           <div className="top-content">

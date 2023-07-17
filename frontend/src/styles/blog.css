@@ -55,6 +55,7 @@
   border-radius: 10px;
   background-color: var(--clr-dark-blue);
   transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .artikel-intro-img {

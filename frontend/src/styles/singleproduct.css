@@ -4,18 +4,29 @@
   margin: 0 6%;
 }
 
+.top-section {
+  justify-content: center;
+}
+.single-image {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
 .top-content {
-  max-width: 70%;
+  padding-top: 15em;
+  width: 65%;
 }
 
 .product-container {
   padding: 1em;
+  margin-bottom: 7em;
   border-radius: 10px;
 }
 
 .image-container {
   margin: 0.5em;
   padding: 1em;
+  margin: 0 auto;
   border-radius: 10px;
 }
 .single-image {
@@ -68,9 +79,6 @@
   }
   .product-container {
     margin-top: -3em;
-  }
-  .image-container {
-    margin: 0 auto;
   }
   .top-content {
     text-align: center;

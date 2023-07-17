@@ -20,7 +20,7 @@ const data = [
 
   {
     _id: "3",
-    question: "What are the image qualitys from close?",
+    question: "What is the image quality from close ?",
     img: "/accordion/zoom.jpg",
     img1: "/accordion/zoom(1).jpg",
     img2: "/accordion/zoom(2).jpg",
@@ -29,7 +29,7 @@ const data = [
   },
   {
     _id: "4",
-    question: "Why download and no real prints?",
+    question: "Why digital and physical prints?",
     answers:
       "I'm solo, no teams, no nothing. The time it would take me to deliver prints on canvas or whatnot is not worth the cost. The best time to deliver quality prints for me, worldwide, is about 3 weeks.",
     answers2:
