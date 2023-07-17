@@ -33,7 +33,9 @@ const Header = () => {
           </span>
         </button>
         <nav>
-          <ul className={isActive ? "navigation" : "navigation-open"}>
+          <ul
+            className={isActive ? "navigation" : "navigation-open"}
+            onClick={navToggle}>
             <Link to="/BlogPage">
               <li>
                 <button className="text-white fs-mobile">Blog</button>

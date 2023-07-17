@@ -5,6 +5,9 @@ import "../styles/singleproduct.css";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import abstract from "../abstract.js";
+import Tilt from "react-parallax-tilt";
+import Accordion from "../components/Accordion";
+import data from "../accordion";
 
 const PortraitDetailScreen = () => {
   const { id: productId } = useParams();
@@ -12,30 +15,73 @@ const PortraitDetailScreen = () => {
 
   return (
     <section className="section-single">
-      <div className="flex single-container">
-        <div className="button-container">
-          <button className="main-button ff-serif uppercase">Go Back</button>
-        </div>
-        <div>
-          <h1 className="letter-spacing ff-serif fs-900">{abstracts.name}</h1>
-        </div>
-        <div className="button-container">
-          <button className="main-button ff-serif uppercase">
-            Add To Cart
-          </button>
+      <div className="flex">
+        <div className="center">
+          <h1 className="letter-spacing ff-serif fs-900 text-brown">
+            - {abstracts.name} -
+          </h1>
         </div>
       </div>
-      <div className="product-container">
+      <div className="product-container box-shadow">
         <div className="top-section flex">
-          <div className="image-container">
-            <img src={abstracts.image} alt={abstracts.alt} />
+          <div className="image-container box-shadow">
+            <Tilt titlReverse={true}>
+              <img
+                className="single-image"
+                src={abstracts.image}
+                alt={abstracts.alt}
+              />
+            </Tilt>
           </div>
           <div className="top-content">
-            <h2>{abstracts.alt}</h2>
+            <p className="fs-400">{abstracts.alt}</p>
             <div className="button-container-top">
-              <button className="main-button ff-serif uppercase">
+              <button className="main-button ff-serif uppercase shake">
                 Add to cart
               </button>
+            </div>
+          </div>
+        </div>
+        <div className="mid-content">
+          <div className="discription">
+            <p className="fs-400 text-green">Description:</p>
+            <p>{abstracts.description}</p>
+          </div>
+          <div className="lower-content">
+            <div className="use-grid">
+              <p className="fs-400 text-green">How To Use:</p>
+              <div className="grid">
+                <p>1. Download it</p>
+                <p>2. Print it</p>
+                <p>3. Frame it</p>
+                <div className="explane flex">
+                  <div className="grid short-text-single">
+                    <p className="fs-400 text-green">Quality:</p>
+                    <p>Image size: 8500px</p>
+                    <p>Image PPI: 300ppi</p>
+                  </div>
+                  <div className="grid short-text-single">
+                    <p className="fs-400 text-green">Sizes:</p>
+                    <p>Use up to 24-32inch</p>
+                    <p>Or 32-32inch</p>
+                  </div>
+                  <div className="grid short-text-single">
+                    <p className="fs-400 text-green">Inculde:</p>
+                    <p>1:1 ratio</p>
+                    <p>5:7 ratio</p>
+                  </div>
+                </div>
+              </div>
+              <div className="accordion">
+                <div className="accordion-title-center">
+                  <p className="ff-serif fs-800 text-brown">F A Q</p>
+                </div>
+                {data.map((data) => (
+                  <div key={data._id}>
+                    <Accordion data={data} />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
