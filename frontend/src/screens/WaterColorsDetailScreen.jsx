@@ -2,21 +2,31 @@
 import React from "react";
 import "../styles/singleproduct.css";
 import { useParams } from "react-router-dom";
-import watercolors from "../watercolors.js";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import Tilt from "react-parallax-tilt";
 import Accordion from "../components/Accordion";
 import data from "../accordion";
 
 const WaterColorsDetailScreen = () => {
+  const [watercolors, setWatercolors] = useState({});
+
   const { id: productId } = useParams();
-  const watercolorss = watercolors.find((p) => p._id === productId);
+
+  useEffect(() => {
+    const fetchWatercolors = async () => {
+      const { data } = await axios.get(`/api/watercolors/${productId}`);
+      setWatercolors(data);
+    };
+    fetchWatercolors();
+  }, [productId]);
 
   return (
     <section className="section-single">
       <div className="flex">
         <div className="center">
           <h1 className="letter-spacing ff-serif fs-900 text-brown">
-            - {watercolorss.name} -
+            - {watercolors.name} -
           </h1>
         </div>
       </div>
@@ -26,19 +36,19 @@ const WaterColorsDetailScreen = () => {
             <Tilt titlReverse={true}>
               <picture className="single-image">
                 <source
-                  srcSet={watercolorss.imagelong}
+                  srcSet={watercolors.imagelong}
                   media="(min-width: 1250px"
                 />
                 <img
                   className="single-image"
-                  src={watercolorss.image}
-                  alt={watercolorss.alt}
+                  src={watercolors.image}
+                  alt={watercolors.alt}
                 />
               </picture>
             </Tilt>
           </div>
           <div className="top-content">
-            <p className="fs-400">{watercolorss.alt}</p>
+            <p className="fs-400">{watercolors.alt}</p>
             <div className="button-container-top">
               <button className="main-button ff-serif uppercase shake">
                 Add to cart
@@ -49,7 +59,7 @@ const WaterColorsDetailScreen = () => {
         <div className="mid-content">
           <div className="discription">
             <p className="fs-400 text-green">Description:</p>
-            <p>{watercolorss.description}</p>
+            <p>{watercolors.description}</p>
           </div>
           <div className="lower-content">
             <div className="use-grid">

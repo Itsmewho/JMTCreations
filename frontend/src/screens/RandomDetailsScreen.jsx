@@ -3,14 +3,23 @@
 import React from "react";
 import "../styles/singleproduct.css";
 import { useParams } from "react-router-dom";
-import random from "../random.js";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import Tilt from "react-parallax-tilt";
 import Accordion from "../components/Accordion";
 import data from "../accordion";
 
 const RandomDetailsScreen = () => {
+  const [randoms, setRandom] = useState({});
   const { id: productId } = useParams();
-  const randoms = random.find((p) => p._id === productId);
+
+  useEffect(() => {
+    const fetchRandom = async () => {
+      const { data } = await axios.get(`/api/random/${productId}`);
+      setRandom(data);
+    };
+    fetchRandom();
+  }, [productId]);
 
   return (
     <section className="section-single">
@@ -26,10 +35,7 @@ const RandomDetailsScreen = () => {
           <div className="image-container box-shadow">
             <Tilt titlReverse={true}>
               <picture className="single-image">
-                <source
-                  srcSet={randoms.imagelong}
-                  media="(min-width: 1250px"
-                />
+                <source srcSet={randoms.imagelong} media="(min-width: 1250px" />
                 <img
                   className="single-image"
                   src={randoms.image}

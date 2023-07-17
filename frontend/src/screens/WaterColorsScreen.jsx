@@ -1,10 +1,22 @@
 /** @format */
 
 import React from "react";
-import watercolors from "../watercolors";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import WaterColor from "../components/WaterColor";
 
 const WaterColorScreen = () => {
+  const [watercolors, setWatercolors] = useState([]);
+
+  useEffect(() => {
+    const fetchWatercolors = async () => {
+      const { data } = await axios.get("/api/watercolors");
+      setWatercolors(data);
+    };
+
+    fetchWatercolors();
+  }, []);
+
   return (
     <>
       <section className="section-cat">

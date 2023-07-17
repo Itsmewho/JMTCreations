@@ -3,14 +3,23 @@
 import React from "react";
 import "../styles/singleproduct.css";
 import { useParams } from "react-router-dom";
-import popanime from "../popanime.js";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import Tilt from "react-parallax-tilt";
 import Accordion from "../components/Accordion";
 import data from "../accordion";
 
 const PopDetailScreen = () => {
+  const [popanimes, setPopanime] = useState({});
   const { id: productId } = useParams();
-  const popanimes = popanime.find((p) => p._id === productId);
+
+  useEffect(() => {
+    const fetchPopanime = async () => {
+      const { data } = await axios.get(`/api/popanime/${productId}`);
+      setPopanime(data);
+    };
+    fetchPopanime();
+  }, [productId]);
 
   return (
     <section className="section-single">

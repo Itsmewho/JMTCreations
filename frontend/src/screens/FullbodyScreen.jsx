@@ -2,10 +2,22 @@
 
 import React from "react";
 import "../styles/categroys.css";
-import fullbody from "../fullbody";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Fullbody from "../components/Fullbody";
 
 const FullbodyScreen = () => {
+  const [fullbody, setFullbody] = useState([]);
+
+  useEffect(() => {
+    const fetchFullbody = async () => {
+      const { data } = await axios.get("/api/fullbody");
+      setFullbody(data);
+    };
+
+    fetchFullbody();
+  }, []);
+
   return (
     <>
       <section className="section-cat">
@@ -23,7 +35,7 @@ const FullbodyScreen = () => {
         </div>
       </section>
     </>
-  )
+  );
 };
 
 export default FullbodyScreen;

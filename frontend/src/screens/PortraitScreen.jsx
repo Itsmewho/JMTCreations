@@ -1,10 +1,21 @@
 /** @format */
-
+import { useEffect, useState } from "react";
+import axios from "axios";
 import React from "react";
-import abstract from "../abstract";
 import Portrait from "../components/Portrait";
 
 const PortraitScreen = () => {
+  const [abstract, setAbstract] = useState([]);
+
+  useEffect(() => {
+    const fetchAbstract = async () => {
+      const { data } = await axios.get("/api/abstract");
+      setAbstract(data);
+    };
+
+    fetchAbstract();
+  }, []);
+
   return (
     <>
       <section className="section-cat">

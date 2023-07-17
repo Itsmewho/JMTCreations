@@ -1,11 +1,23 @@
 /** @format */
 
 import React from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import "../styles/categroys.css";
-import popanime from "../popanime";
 import PopAnime from "../components/PopAnime.jsx";
 
 const PopAnimeScreen = () => {
+  const [popanime, setPopanime] = useState([]);
+
+  useEffect(() => {
+    const fetchPopanime = async () => {
+      const { data } = await axios.get("/api/popanime");
+      setPopanime(data);
+    };
+
+    fetchPopanime();
+  }, []);
+
   return (
     <>
       <section className="section-cat">
