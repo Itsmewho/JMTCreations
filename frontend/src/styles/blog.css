@@ -101,6 +101,9 @@
   .blog-title {
     margin-right: 13%;
   }
+  .blog-short-text{
+    margin-top: 2em;
+  }
   .intro-blog-layout {
     padding: 0em 3%;
   }
@@ -110,6 +113,7 @@
   .short-text {
     display: flex;
   }
+
   .blog-button {
     display: none;
   }

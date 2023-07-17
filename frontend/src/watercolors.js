@@ -4,7 +4,7 @@ const watercolors = [
   {
     _id: "999",
     name: "Abstract",
-    image: "/Watercolors/JMTCreations (1).jpg",
+    image: "/Watercolors/JMTCreations(1).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
     description:
       "Abstract paintings: They're vibrant portals to a whimsical dimension, where untamed brushstrokes and bold hues collide in a lively symphony.",
@@ -14,7 +14,7 @@ const watercolors = [
   {
     _id: "998",
     name: "Pop Anime",
-    image: "/Watercolors/JMTCreations (2).jpg",
+    image: "/Watercolors/JMTCreations(2).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
     description:
       "Dive into a world of vibrant colors, larger-than-life characters, and boundless imagination. Pop Anime Art is a captivating fusion of pop culture.",
@@ -24,7 +24,7 @@ const watercolors = [
   {
     _id: "997",
     name: "Watercolors",
-    image: "/Watercolors/JMTCreations (3).jpg",
+    image: "/Watercolors/JMTCreations(3).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
     description:
       "Step into a vibrant world where colors dance and imagination soars. Abstract watercolor paintings are portals to boundless creativity.",
@@ -34,7 +34,7 @@ const watercolors = [
   {
     _id: "996",
     name: "Dancing",
-    image: "/Watercolors/JMTCreations (4).jpg",
+    image: "/Watercolors/JMTCreations(4).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
     description:
       "Step into a world where colors come alive, where the canvas becomes a stage, and brush strokes dance with the rhythm of expression.",
@@ -44,7 +44,7 @@ const watercolors = [
   {
     _id: "995",
     name: "Expressions",
-    image: "/Watercolors/JMTCreations (5).jpg",
+    image: "/Watercolors/JMTCreations(5).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
     description:
       "Enter a world where brushstrokes explode with emotion, swirling and colliding in a symphony of color.",
@@ -54,7 +54,7 @@ const watercolors = [
   {
     _id: "994",
     name: "Random",
-    image: "/Watercolors/JMTCreations (6).jpg",
+    image: "/Watercolors/JMTCreations(6).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
     description:
       "Embrace the unexpected, be mesmerized by vibrant colors, life like portraits, and audacious fusions.",
