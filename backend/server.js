@@ -3,6 +3,9 @@
 import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
+import connectDB from "./config/db.js";
+
+// for temp loading images ->
 import abstract from "./data/abstract.js";
 import popanime from "./data/popanime.js";
 import fullbody from "./data/fullbody.js";
@@ -11,6 +14,8 @@ import watercolors from "./data/watercolors.js";
 import random from "./data/random.js";
 
 const port = process.env.PORT || 5000;
+
+connectDB(); // connect to MongoDB
 
 const app = express();
 
