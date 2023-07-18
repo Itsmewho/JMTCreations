@@ -2,7 +2,6 @@
 
 const watercolors = [
   {
-    _id: "999",
     name: "Abstract",
     image: "/Watercolors/JMTCreations(1).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
@@ -12,7 +11,6 @@ const watercolors = [
     slogan: "Embrace the Colors, Ignite Your Imagination!",
   },
   {
-    _id: "998",
     name: "Pop Anime",
     image: "/Watercolors/JMTCreations(2).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
@@ -22,7 +20,6 @@ const watercolors = [
     slogan: "Pop Anime Art: Where Colors Collide, Imagination Thrives!",
   },
   {
-    _id: "997",
     name: "Watercolors",
     image: "/Watercolors/JMTCreations(3).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
@@ -32,7 +29,6 @@ const watercolors = [
     slogan: "Your Imagination with Abstract Watercolors!",
   },
   {
-    _id: "996",
     name: "Dancing",
     image: "/Watercolors/JMTCreations(4).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
@@ -42,7 +38,6 @@ const watercolors = [
     slogan: "Brushstrokes of Life, Where Colors Dance",
   },
   {
-    _id: "995",
     name: "Expressions",
     image: "/Watercolors/JMTCreations(5).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
@@ -52,7 +47,6 @@ const watercolors = [
     slogan: "Embrace the Abstract Symphony!",
   },
   {
-    _id: "994",
     name: "Random",
     image: "/Watercolors/JMTCreations(6).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",

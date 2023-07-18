@@ -2,7 +2,7 @@
 
 const fullbody = [
   {
-    _id: "999",
+
     name: "Abstract",
     image: "/Dansers/JMTCreationsDancer(1).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
@@ -12,7 +12,7 @@ const fullbody = [
     slogan: "Embrace the Colors, Ignite Your Imagination!",
   },
   {
-    _id: "998",
+
     name: "Pop Anime",
     image: "/Dansers/JMTCreationsDancer(2).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
@@ -22,7 +22,7 @@ const fullbody = [
     slogan: "Pop Anime Art: Where Colors Collide, Imagination Thrives!",
   },
   {
-    _id: "997",
+
     name: "Watercolors",
     image: "/Dansers/JMTCreationsDancer(3).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
@@ -32,7 +32,7 @@ const fullbody = [
     slogan: "Your Imagination with Abstract Watercolors!",
   },
   {
-    _id: "996",
+
     name: "Dancing",
     image: "/Dansers/JMTCreationsDancer(4).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
@@ -42,7 +42,6 @@ const fullbody = [
     slogan: "Brushstrokes of Life, Where Colors Dance",
   },
   {
-    _id: "995",
     name: "Expressions",
     image: "/Dansers/JMTCreationsDancer(5).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
@@ -52,7 +51,7 @@ const fullbody = [
     slogan: "Embrace the Abstract Symphony!",
   },
   {
-    _id: "994",
+
     name: "Random",
     image: "/Dansers/JMTCreationsDancer(6).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",

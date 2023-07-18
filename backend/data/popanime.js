@@ -2,7 +2,6 @@
 
 const popanime = [
   {
-    _id: "999",
     name: "Abstract",
     image: "/PopAnime/JMTCreactionsPop(1).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
@@ -12,7 +11,6 @@ const popanime = [
     slogan: "Embrace the Colors, Ignite Your Imagination!",
   },
   {
-    _id: "998",
     name: "Pop Anime",
     image: "/PopAnime/JMTCreactionsPop(4).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
@@ -22,7 +20,6 @@ const popanime = [
     slogan: "Pop Anime Art: Where Colors Collide, Imagination Thrives!",
   },
   {
-    _id: "997",
     name: "Watercolors",
     image: "/PopAnime/JMTCreactionsPop(15).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
@@ -32,7 +29,6 @@ const popanime = [
     slogan: "Your Imagination with Abstract Watercolors!",
   },
   {
-    _id: "996",
     name: "Dancing",
     image: "/PopAnime/JMTCreactionsPop(7).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
@@ -42,7 +38,6 @@ const popanime = [
     slogan: "Brushstrokes of Life, Where Colors Dance",
   },
   {
-    _id: "995",
     name: "Expressions",
     image: "/PopAnime/JMTCreactionsPop(16).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
@@ -52,7 +47,6 @@ const popanime = [
     slogan: "Embrace the Abstract Symphony!",
   },
   {
-    _id: "994",
     name: "Random",
     image: "/PopAnime/JMTCreactionsPop(20).jpg",
     imagelong: "/Abstract/JMTCreationsAbstract6.jpg",
