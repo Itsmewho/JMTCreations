@@ -1,17 +1,29 @@
 /** @format */
 
 import express from "express";
-import fullbody from "../data/fullbody.js";
+import asyncHandler from "../middleware/asyncHandler.js";
+import Fullbody from "../models/fullbodyModel.js";
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.json(fullbody);
-});
+router.get(
+  "/",
+  asyncHandler(async (req, res) => {
+    const fullbody = await Fullbody.find({});
+    res.json(fullbody);
+  })
+);
 
-router.get("/:id", (req, res) => {
-  const fullbodys = fullbody.find((p) => p._id === req.params.id);
-  res.json(fullbodys);
-});
+router.get(
+  "/:id",
+  asyncHandler(async (req, res) => {
+    const fullbodys = await Fullbody.findById(req.params.id);
+
+    if (fullbodys) {
+      res.json(fullbodys);
+    }
+    res.status(404).json({ message: "Product not found" });
+  })
+);
 
 export default router;

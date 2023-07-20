@@ -75,17 +75,15 @@ const importData = async () => {
     });
     await Popanime.insertMany(samplePopanime);
 
-
     console.log("Data imported!".green.inverse);
-
   } catch (error) {
     console.error(`${error}`.red.inverse);
     process.exit(1);
   }
 };
 
-const destroyData = async ()=> {
-  try{
+const destroyData = async () => {
+  try {
     await Order.deleteMany();
     await Expression.deleteMany();
     await Watercolors.deleteMany();
@@ -100,12 +98,11 @@ const destroyData = async ()=> {
   } catch (error) {
     console.error(`${error}`.red.inverse);
     process.exit(1);
-
   }
 };
 
-if(process.argv[2] === '-d'){
+if (process.argv[2] === "-d") {
   destroyData();
-} else{
+} else {
   importData();
 }

@@ -1,16 +1,30 @@
 /** @format */
 
 import express from "express";
-import watercolors from "../data/watercolors.js";
+import asyncHandler from "../middleware/asyncHandler.js";
+import Watercolors from "../models/watercolorsModel.js";
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.json(watercolors);
-});
-router.get("/:id", (req, res) => {
-  const watercolor = watercolors.find((p) => p._id === req.params.id);
-  res.json(watercolor);
-});
+router.get(
+  "/",
+  asyncHandler(async (req, res) => {
+    const watercolors = await Watercolors.find({});
+    res.json(watercolors);
+  })
+);
+
+router.get(
+  "/:id",
+  asyncHandler(async (req, res) => {
+    const watercolors = await Watercolors.findById(req.params.id);
+
+    if (watercolors) {
+      return res.json(watercolors);
+    }
+
+    res.status(404).json({ message: "Product not found" });
+  })
+);
 
 export default router;
