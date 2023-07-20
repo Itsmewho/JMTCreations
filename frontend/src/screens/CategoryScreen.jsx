@@ -43,7 +43,7 @@ const CategoryScreen = () => {
                     </p>
                   </div>
                   <div className="cart-cta">
-                    <button className="main-button bold shake">&#62;</button>
+                    <button className="main-button bold shake">Go</button>
                   </div>
                 </div>
               </div>
@@ -76,7 +76,7 @@ const CategoryScreen = () => {
                     </p>
                   </div>
                   <div className="cart-cta">
-                    <button className="main-button bold shake">&#62;</button>
+                    <button className="main-button bold shake">Go</button>
                   </div>
                 </div>
               </div>
@@ -109,7 +109,7 @@ const CategoryScreen = () => {
                     </p>
                   </div>
                   <div className="cart-cta">
-                    <button className="main-button bold shake">&#62;</button>
+                    <button className="main-button bold shake">Go</button>
                   </div>
                 </div>
               </div>
@@ -143,7 +143,7 @@ const CategoryScreen = () => {
                     </p>
                   </div>
                   <div className="cart-cta">
-                    <button className="main-button bold shake">&#62;</button>
+                    <button className="main-button bold shake">Go</button>
                   </div>
                 </div>
               </div>
@@ -175,7 +175,7 @@ const CategoryScreen = () => {
                     </p>
                   </div>
                   <div className="cart-cta">
-                    <button className="main-button bold shake">&#62;</button>
+                    <button className="main-button bold shake">Go</button>
                   </div>
                 </div>
               </div>
@@ -207,7 +207,7 @@ const CategoryScreen = () => {
                     </p>
                   </div>
                   <div className="cart-cta">
-                    <button className="main-button bold shake">&#62;</button>
+                    <button className="main-button bold shake">Go</button>
                   </div>
                 </div>
               </div>

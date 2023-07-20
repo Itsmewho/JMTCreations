@@ -29,7 +29,7 @@ const Expression = (  {expression} ) => {
           </p>
         </div>
         <div className="cart-cta">
-          <button className="main-button bold shake">&#62;</button>
+          <button className="main-button bold shake">See</button>
         </div>
       </div>
     </div>

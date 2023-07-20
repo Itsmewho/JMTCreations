@@ -21,9 +21,10 @@ router.get(
 
     if (popanime) {
       return res.json(popanime);
+    } else {
+      res.status(404);
+      throw new Error("Resource not found");
     }
-
-    res.status(404).json({ message: "Product not found" });
   })
 );
 
