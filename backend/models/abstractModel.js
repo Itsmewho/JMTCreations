@@ -32,10 +32,6 @@ const abstractSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    shorttext: {
-      type: String,
-      required: true,
-    },
   },
   {
     timestamps: true,
