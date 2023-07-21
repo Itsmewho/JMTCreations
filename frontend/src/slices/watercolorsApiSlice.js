@@ -1,3 +1,5 @@
+/** @format */
+
 import { WATERCOLORS_URL } from "../constants.js";
 import { apiSlice } from "./apiSlice.js";
 
@@ -9,7 +11,14 @@ export const watercolorsApiSlice = apiSlice.injectEndpoints({
       }),
       keepUnusedDataFor: 5,
     }),
+    getWatercolorsDetails: builder.query({
+      query: (watercolorsId) => ({
+        url: `${WATERCOLORS_URL}/${watercolorsId}`,
+      }),
+      keepUnusedDataFor: 5,
+    }),
   }),
 });
 
-export const { useGetWatercolorsQuery } = watercolorsApiSlice;
+export const { useGetWatercolorsQuery, useGetWatercolorsDetailsQuery } =
+  watercolorsApiSlice;

@@ -11,7 +11,14 @@ export const abstractApiSlice = apiSlice.injectEndpoints({
       }),
       keepUnusedDataFor: 5,
     }),
+    getAbstractDetails: builder.query({
+      query: (abstractId) => ({
+        url: `${ABSTRACT_URL}/${abstractId}`,
+      }),
+      keepUnusedDataFor: 5,
+    }),
   }),
 });
 
-export const { useGetAbstractQuery } = abstractApiSlice;
+export const { useGetAbstractQuery, useGetAbstractDetailsQuery } =
+  abstractApiSlice;

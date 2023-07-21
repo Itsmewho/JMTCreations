@@ -1,3 +1,5 @@
+/** @format */
+
 import { RANDOM_URL } from "../constants.js";
 import { apiSlice } from "./apiSlice.js";
 
@@ -9,7 +11,13 @@ export const randomApiSlice = apiSlice.injectEndpoints({
       }),
       keepUnusedDataFor: 5,
     }),
+    getRandomDetails: builder.query({
+      query: (randomId) => ({
+        url: `${RANDOM_URL}/${randomId}`,
+      }),
+      keepUnusedDataFor: 5,
+    }),
   }),
 });
 
-export const { useGetRandomQuery } = randomApiSlice;
+export const { useGetRandomQuery, useGetRandomDetailsQuery } = randomApiSlice;

@@ -1,3 +1,5 @@
+/** @format */
+
 import { EXPRESSION_URL } from "../constants.js";
 import { apiSlice } from "./apiSlice.js";
 
@@ -9,7 +11,14 @@ export const expressionApiSlice = apiSlice.injectEndpoints({
       }),
       keepUnusedDataFor: 5,
     }),
+    getExpressionDetails: builder.query({
+      query: (expressionId) => ({
+        url: `${EXPRESSION_URL}/${expressionId}`,
+      }),
+      keepUnusedDataFor: 5,
+    }),
   }),
 });
 
-export const { useGetExpressionQuery } = expressionApiSlice;
+export const { useGetExpressionQuery, useGetExpressionDetailsQuery } =
+  expressionApiSlice;

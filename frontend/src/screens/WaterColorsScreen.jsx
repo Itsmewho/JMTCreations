@@ -1,38 +1,39 @@
 /** @format */
 
 import React from "react";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import "../styles/categroys.css";
 import WaterColor from "../components/WaterColor";
+import { useGetWatercolorsQuery } from "../slices/watercolorsApiSlice";
 
 const WaterColorScreen = () => {
-  const [watercolors, setWatercolors] = useState([]);
-
-  useEffect(() => {
-    const fetchWatercolors = async () => {
-      const { data } = await axios.get("/api/watercolors");
-      setWatercolors(data);
-    };
-
-    fetchWatercolors();
-  }, []);
+  const { data: watercolors, isLoading, error } = useGetWatercolorsQuery();
 
   return (
     <>
-      <section className="section-cat">
-        <div className=" flex center">
-          <h1 className="fs-900 text-brown letter-spacing">- watercolors -</h1>
-        </div>
-        <div className="grid-container">
-          <div className="category-grid">
-            {watercolors.map((watercolors) => (
-              <div key={watercolors._id} className="grid-block box-shadow">
-                <WaterColor watercolors={watercolors}></WaterColor>
+      {isLoading ? (
+        <h2>Loading,...</h2>
+      ) : error ? (
+        <div> {error?.data?.message || error.error}</div>
+      ) : (
+        <>
+          <section className="section-cat">
+            <div className=" flex center">
+              <h1 className="fs-900 text-brown letter-spacing">
+                - watercolors -
+              </h1>
+            </div>
+            <div className="grid-container">
+              <div className="category-grid">
+                {watercolors.map((watercolors) => (
+                  <div key={watercolors._id} className="grid-block box-shadow">
+                    <WaterColor watercolors={watercolors}></WaterColor>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
+        </>
+      )}
     </>
   );
 };

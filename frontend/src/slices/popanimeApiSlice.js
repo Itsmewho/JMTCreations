@@ -1,3 +1,5 @@
+/** @format */
+
 import { POPANIME_URL } from "../constants.js";
 import { apiSlice } from "./apiSlice.js";
 
@@ -9,7 +11,14 @@ export const popanimeApiSlice = apiSlice.injectEndpoints({
       }),
       keepUnusedDataFor: 5,
     }),
+    getPopanimeDetails: builder.query({
+      query: (popanimeId) => ({
+        url: `${POPANIME_URL}/${popanimeId}`,
+      }),
+      keepUnusedDataFor: 5,
+    }),
   }),
 });
 
-export const { useGetPopanimeQuery } = popanimeApiSlice;
+export const { useGetPopanimeQuery, useGetPopanimeDetailsQuery } =
+  popanimeApiSlice;

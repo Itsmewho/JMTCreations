@@ -1,39 +1,37 @@
 /** @format */
 
 import React from "react";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import "../styles/categroys.css";
 import Random from "../components/Random";
+import { useGetRandomQuery } from "../slices/randomApiSlice";
 
 const RandomScreen = () => {
-  const [random, setRandom] = useState([]);
-
-  useEffect(() => {
-    const fetchRandom = async () => {
-      const { data } = await axios.get("/api/random");
-      setRandom(data);
-    };
-
-    fetchRandom();
-  }, []);
+  const { data: random, isLoading, error } = useGetRandomQuery();
 
   return (
     <>
-      <section className="section-cat">
-        <div className=" flex center">
-          <h1 className="fs-900 text-brown letter-spacing">- Random -</h1>
-        </div>
-        <div className="grid-container">
-          <div className="category-grid">
-            {random.map((random) => (
-              <div key={random._id} className="grid-block box-shadow">
-                <Random random={random}></Random>
+      {isLoading ? (
+        <h2>Loading,...</h2>
+      ) : error ? (
+        <div> {error?.data?.message || error.error}</div>
+      ) : (
+        <>
+          <section className="section-cat">
+            <div className=" flex center">
+              <h1 className="fs-900 text-brown letter-spacing">- Random -</h1>
+            </div>
+            <div className="grid-container">
+              <div className="category-grid">
+                {random.map((random) => (
+                  <div key={random._id} className="grid-block box-shadow">
+                    <Random random={random}></Random>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
+        </>
+      )}
     </>
   );
 };
