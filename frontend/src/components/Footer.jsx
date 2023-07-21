@@ -2,6 +2,7 @@
 
 import React from "react";
 import "../styles/footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -33,6 +34,19 @@ const Footer = () => {
               In
             </a>
           </div>
+        </div>
+      </div>
+      <div className="service-container">
+        <div className="footer-center">
+          <Link to={`/privacy`} className="ff-sans fs-400 text-white hover-text padding">
+            Privacy
+          </Link>
+          <Link to={`/service`} className="ff-sans fs-400 text-white hover-text padding">
+            Service
+          </Link>
+          <Link to={`/contact`} className="ff-sans fs-400 text-white hover-text padding">
+            Contact
+          </Link>
         </div>
       </div>
     </footer>

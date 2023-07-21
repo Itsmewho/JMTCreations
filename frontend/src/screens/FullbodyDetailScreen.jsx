@@ -3,105 +3,109 @@
 import React from "react";
 import "../styles/singleproduct.css";
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
-import axios from "axios";
 import Tilt from "react-parallax-tilt";
 import Accordion from "../components/Accordion";
 import data from "../accordion";
+import { useGetFullbodyDetailsQuery } from "../slices/fullbodyApiSlice.js";
 
 const FullbodyDetailScreen = () => {
-
-  const [fullbodys, setFullbody] = useState({});
-  const { id: productId } = useParams();
-
-  useEffect(() => {
-    const fetchFullbody = async () => {
-      const {data} = await axios.get(`/api/fullbody/${productId}`);
-      setFullbody(data);
-    };
-    fetchFullbody();
-  }, [productId]);
+  const { id: fullbodyId } = useParams();
+  const {
+    data: fullbody,
+    isLoading,
+    error,
+  } = useGetFullbodyDetailsQuery(fullbodyId);
 
   return (
-    <section className="section-single">
-      <div className="flex">
-        <div className="center">
-          <h1 className="letter-spacing ff-serif fs-900 text-brown">
-            - {fullbodys.name} -
-          </h1>
-        </div>
-      </div>
-      <div className="product-container box-shadow">
-        <div className="top-section flex">
-          <div className="image-container box-shadow">
-            <Tilt titlReverse={true}>
-              <picture className="single-image">
-                <source
-                  srcSet={fullbodys.imagelong}
-                  media="(min-width: 1250px"
-                />
-                <img
-                  className="single-image"
-                  src={fullbodys.image}
-                  alt={fullbodys.alt}
-                />
-              </picture>
-            </Tilt>
-          </div>
-          <div className="top-content">
-            <p className="fs-400">{fullbodys.alt}</p>
-            <div className="button-container-top">
-              <button className="main-button ff-serif uppercase shake">
-                Add to cart
-              </button>
+    <>
+      {isLoading ? (
+        <h2>Loading,...</h2>
+      ) : error ? (
+        <div> {error?.data?.message || error.error}</div>
+      ) : (
+        <>
+          <section className="section-single">
+            <div className="flex">
+              <div className="center">
+                <h1 className="letter-spacing ff-serif fs-900 text-brown">
+                  - {fullbody.name} -
+                </h1>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="mid-content">
-          <div className="discription">
-            <p className="fs-400 text-green">Description:</p>
-            <p>{fullbodys.description}</p>
-          </div>
-          <div className="lower-content">
-            <div className="use-grid">
-              <p className="fs-400 text-green">How To Use:</p>
-              <div className="grid">
-                <p>1. Download it</p>
-                <p>2. Print it</p>
-                <p>3. Frame it</p>
-                <div className="explane flex">
-                  <div className="grid short-text-single">
-                    <p className="fs-400 text-green">Quality:</p>
-                    <p>Image size: 8500px</p>
-                    <p>Image PPI: 300ppi</p>
-                  </div>
-                  <div className="grid short-text-single">
-                    <p className="fs-400 text-green">Sizes:</p>
-                    <p>Use up to 24-32inch</p>
-                    <p>Or 32-32inch</p>
-                  </div>
-                  <div className="grid short-text-single">
-                    <p className="fs-400 text-green">Inculde:</p>
-                    <p>1:1 ratio</p>
-                    <p>5:7 ratio</p>
+            <div className="product-container box-shadow">
+              <div className="top-section flex">
+                <div className="image-container box-shadow">
+                  <Tilt titlReverse={true}>
+                    <picture className="single-image">
+                      <source
+                        srcSet={fullbody.imagelong}
+                        media="(min-width: 1250px"
+                      />
+                      <img
+                        className="single-image"
+                        src={fullbody.image}
+                        alt={fullbody.alt}
+                      />
+                    </picture>
+                  </Tilt>
+                </div>
+                <div className="top-content">
+                  <p className="fs-400">{fullbody.alt}</p>
+                  <div className="button-container-top">
+                    <button className="main-button ff-serif uppercase shake">
+                      Add to cart
+                    </button>
                   </div>
                 </div>
               </div>
-              <div className="accordion">
-                <div className="accordion-title-center">
-                  <p className="ff-serif fs-800 text-brown">F A Q</p>
+              <div className="mid-content">
+                <div className="discription">
+                  <p className="fs-400 text-green">Description:</p>
+                  <p>{fullbody.description}</p>
                 </div>
-                {data.map((data) => (
-                  <div key={data._id}>
-                    <Accordion data={data} />
+                <div className="lower-content">
+                  <div className="use-grid">
+                    <p className="fs-400 text-green">How To Use:</p>
+                    <div className="grid">
+                      <p>1. Download it</p>
+                      <p>2. Print it</p>
+                      <p>3. Frame it</p>
+                      <div className="explane flex">
+                        <div className="grid short-text-single">
+                          <p className="fs-400 text-green">Quality:</p>
+                          <p>Image size: 8500px</p>
+                          <p>Image PPI: 300ppi</p>
+                        </div>
+                        <div className="grid short-text-single">
+                          <p className="fs-400 text-green">Sizes:</p>
+                          <p>Use up to 24-32inch</p>
+                          <p>Or 32-32inch</p>
+                        </div>
+                        <div className="grid short-text-single">
+                          <p className="fs-400 text-green">Inculde:</p>
+                          <p>1:1 ratio</p>
+                          <p>5:7 ratio</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="accordion">
+                      <div className="accordion-title-center">
+                        <p className="ff-serif fs-800 text-brown">F A Q</p>
+                      </div>
+                      {data.map((data) => (
+                        <div key={data._id}>
+                          <Accordion data={data} />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                ))}
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          </section>
+        </>
+      )}
+    </>
   );
 };
 
