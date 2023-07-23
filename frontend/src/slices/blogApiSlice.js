@@ -20,4 +20,4 @@ export const blogApiSlice = apiSlice.injectEndpoints({
   }),
 });
 
-export const { useGetBloguery, useGetBlogDetailsQuery } = blogApiSlice;
+export const { useGetBlogQuery, useGetBlogDetailsQuery } = blogApiSlice;

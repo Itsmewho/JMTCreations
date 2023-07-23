@@ -13,7 +13,7 @@ const Expression = ({ expression }) => {
           {expression.name}
         </h1>
         <div className="cart-content">
-          <Tilt titlReverse={true}>
+          <Tilt tiltReverse={true}>
             <img
               loading="lazy"
               className="cart-image"

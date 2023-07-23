@@ -34,6 +34,7 @@ import RandomDetailScreen from "./screens/RandomDetailsScreen";
 import PrivacyScreen from "./screens/PrivacyScreen.jsx";
 import ServiceScreen from "./screens/ServiceScreen.jsx";
 import ContactScreen from "./screens/ContactScreen.jsx";
+import BlogSingleScreen from "./BlogScreens/BlogSingleScreen.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -62,6 +63,7 @@ const router = createBrowserRouter(
         element={<ExpressionDetailScreen />}
       />
       <Route path="/product/random/:id" element={<RandomDetailScreen />} />
+      <Route path="/blog/blogpost/:id" element={<BlogSingleScreen />} />
       <Route path="/service" element={<ServiceScreen />} />
       <Route path="/privacy" element={<PrivacyScreen />} />
       <Route path="/contact" element={<ContactScreen />} />
