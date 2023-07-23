@@ -7,6 +7,7 @@ import Tilt from "react-parallax-tilt";
 import Accordion from "../components/Accordion";
 import data from "../accordion";
 import { useGetExpressionDetailsQuery } from "../slices/expressionApiSlice.js";
+import { Helmet } from "react-helmet-async";
 
 const ExpressionDetailScreen = () => {
   const { id: expressionId } = useParams();
@@ -25,6 +26,16 @@ const ExpressionDetailScreen = () => {
         <div> {error?.data?.message || error.error}</div>
       ) : (
         <>
+          <Helmet>
+            <title>JMT-Creations | {expression.name}</title>
+            <meta name="description" content={expression.metaDescription} />
+            <link
+              rel="canonical"
+              href={`/product/expression/${expression._id}`}
+            />
+            <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
+          </Helmet>
+
           <section className="section-single">
             <div className="flex">
               <div className="center">

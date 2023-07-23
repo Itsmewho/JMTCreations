@@ -7,6 +7,7 @@ import Tilt from "react-parallax-tilt";
 import Accordion from "../components/Accordion";
 import data from "../accordion";
 import { useGetRandomDetailsQuery } from "../slices/randomApiSlice.js";
+import { Helmet } from "react-helmet-async";
 
 const RandomDetailsScreen = () => {
   const { id: randomId } = useParams();
@@ -20,6 +21,12 @@ const RandomDetailsScreen = () => {
         <div> {error?.data?.message || error.error}</div>
       ) : (
         <>
+          <Helmet>
+            <title>JMT-Creations | {random.name}</title>
+            <meta name="description" content={random.metaDescription} />
+            <link rel="canonical" href={`/product/random/${random._id}`} />
+            <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
+          </Helmet>
           <section className="section-single">
             <div className="flex">
               <div className="center">

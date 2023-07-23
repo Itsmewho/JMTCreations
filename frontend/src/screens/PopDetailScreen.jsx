@@ -7,6 +7,7 @@ import Tilt from "react-parallax-tilt";
 import Accordion from "../components/Accordion";
 import data from "../accordion";
 import { useGetPopanimeDetailsQuery } from "../slices/popanimeApiSlice.js";
+import { Helmet } from "react-helmet-async";
 
 const PopDetailScreen = () => {
   const { id: popanimeId } = useParams();
@@ -24,6 +25,12 @@ const PopDetailScreen = () => {
         <div> {error?.data?.message || error.error}</div>
       ) : (
         <>
+          <Helmet>
+            <title>JMT-Creations | {popanime.name}</title>
+            <meta name="description" content={popanime.metaDescription} />
+            <link rel="canonical" href={`/product/popanime/${popanime._id}`} />
+            <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
+          </Helmet>
           <section className="section-single">
             <div className="flex">
               <div className="center">

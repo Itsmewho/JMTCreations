@@ -7,6 +7,7 @@ import Tilt from "react-parallax-tilt";
 import Accordion from "../components/Accordion";
 import data from "../accordion";
 import { useGetAbstractDetailsQuery } from "../slices/abstractApiSlice.js";
+import { Helmet } from "react-helmet-async";
 
 const PortraitDetailScreen = () => {
   const { id: abstractId } = useParams();
@@ -24,6 +25,12 @@ const PortraitDetailScreen = () => {
         <div> {error?.data?.message || error.error}</div>
       ) : (
         <>
+          <Helmet>
+            <title>JMT-Creations | {abstract.name}</title>
+            <meta name="description" content={abstract.metaDescription} />
+            <link rel="canonical" href={`/product/portrait/${abstract._id}`} />
+            <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
+          </Helmet>
           <section className="section-single">
             <div className="flex">
               <div className="center">

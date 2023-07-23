@@ -1,10 +1,20 @@
 /** @format */
 
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const ServiceScreen = () => {
   return (
     <>
+      <Helmet>
+        <title>JMT-Creations | Service</title>
+        <meta
+          name="description"
+          content="Service-page. Pleace read before using this site"
+        />
+        <link rel="canonical" href="/service" />
+        <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
+      </Helmet>
       <section className="spacer">
         <div className="hero-column spacer">
           <h1 className="ff-serif fs-900 text-brown">TERMS OF SERVICE</h1>

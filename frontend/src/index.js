@@ -9,11 +9,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { Provider } from "react-redux";
+import { HelmetProvider } from "react-helmet-async";
 import store from "./store.js";
 import "./index.css";
 import App from "./App";
 import HomeScreen from "./screens/HomeScreen.jsx";
-import BlogScreen from "./BlogScreens/BlogScreen.jsx"
+import BlogScreen from "./BlogScreens/BlogScreen.jsx";
 import CategoryScreen from "./screens/CategoryScreen.jsx";
 import LoginScreen from "./screens/LoginScreen.jsx";
 import ShoppingCartScreen from "./screens/ShoppingCartScreen.jsx";
@@ -38,7 +39,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<HomeScreen />} />
-      <Route path="/BlogPage" element={<BlogScreen />} />
+      <Route path="/Blog" element={<BlogScreen />} />
       <Route path="/Shop" element={<CategoryScreen />} />
       <Route path="/Login" element={<LoginScreen />} />
       <Route path="/Cart" element={<ShoppingCartScreen />} />
@@ -71,8 +72,10 @@ const router = createBrowserRouter(
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <RouterProvider router={router}></RouterProvider>
-    </Provider>
+    <HelmetProvider>
+      <Provider store={store}>
+        <RouterProvider router={router}></RouterProvider>
+      </Provider>
+    </HelmetProvider>
   </React.StrictMode>
 );

@@ -7,6 +7,7 @@ import Tilt from "react-parallax-tilt";
 import Accordion from "../components/Accordion";
 import data from "../accordion";
 import { useGetFullbodyDetailsQuery } from "../slices/fullbodyApiSlice.js";
+import { Helmet } from "react-helmet-async";
 
 const FullbodyDetailScreen = () => {
   const { id: fullbodyId } = useParams();
@@ -24,6 +25,15 @@ const FullbodyDetailScreen = () => {
         <div> {error?.data?.message || error.error}</div>
       ) : (
         <>
+          <Helmet>
+            <title>JMT-Creations | {fullbody.name}</title>
+            <meta
+              name="description"
+              content={fullbody.metaDescription}
+            />
+            <link rel="canonical" href={`/product/fullbody/${fullbody._id}`} />
+            <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
+          </Helmet>
           <section className="section-single">
             <div className="flex">
               <div className="center">

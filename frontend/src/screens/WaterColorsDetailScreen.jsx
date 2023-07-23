@@ -6,6 +6,7 @@ import Tilt from "react-parallax-tilt";
 import Accordion from "../components/Accordion";
 import data from "../accordion";
 import { useGetWatercolorsDetailsQuery } from "../slices/watercolorsApiSlice.js";
+import { Helmet } from "react-helmet-async";
 
 const WaterColorsDetailScreen = () => {
   const { id: watercolorsId } = useParams();
@@ -23,6 +24,12 @@ const WaterColorsDetailScreen = () => {
         <div> {error?.data?.message || error.error}</div>
       ) : (
         <>
+          <Helmet>
+            <title>JMT-Creations | {watercolors.name}</title>
+            <meta name="description" content={watercolors.metaDescription} />
+            <link rel="canonical" href={`/product/watercolors/${watercolors._id}`} />
+            <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
+          </Helmet>
           <section className="section-single">
             <div className="flex">
               <div className="center">

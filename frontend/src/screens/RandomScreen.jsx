@@ -4,6 +4,7 @@ import React from "react";
 import "../styles/categroys.css";
 import Random from "../components/Random";
 import { useGetRandomQuery } from "../slices/randomApiSlice";
+import { Helmet } from "react-helmet-async";
 
 const RandomScreen = () => {
   const { data: random, isLoading, error } = useGetRandomQuery();
@@ -16,6 +17,15 @@ const RandomScreen = () => {
         <div> {error?.data?.message || error.error}</div>
       ) : (
         <>
+          <Helmet>
+            <title>JMT-Creations | Random Art</title>
+            <meta
+              name="description"
+              content="Experience a world of creativity with our diverse digital art prints. Discover captivating masterpieces that resonate with your style and add flair to your spaces."
+            />
+            <link rel="canonical" href="/Random" />
+            <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
+          </Helmet>
           <section className="section-cat">
             <div className=" flex center">
               <h1 className="fs-900 text-brown letter-spacing">- Random -</h1>
