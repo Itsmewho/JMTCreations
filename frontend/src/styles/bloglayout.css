@@ -1,5 +1,11 @@
 /** @format */
+.section-blog {
+  margin: 7em 6%;
+}
 
+.section-single-blog {
+  margin: 7em 20%;
+}
 .blog-grid-container {
   display: flex;
   justify-content: center;
@@ -13,6 +19,13 @@
 }
 .blog-grid-card {
   border-radius: 15px;
+  padding: 1em;
+  background-color: var(--clr-dark-blue);
+}
+.blog-cart {
+  background-color: var(--clr-rich-black);
+  border-radius: 15px;
+  padding: 0.1em;
 }
 .blog-grid-card:hover {
   background-color: hsl(208, 50%, 9%);
@@ -41,16 +54,84 @@
   margin-right: 0.5em;
   margin-top: -0.5em;
 }
-.blog-button{
-    height: 2.5em;
-    margin-bottom: -.5em;
-    border-radius: 50px;
-    border: none;
-    background-color: black;
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+.blog-button {
+  height: 2.5em;
+  margin-bottom: -0.5em;
+  border-radius: 50px;
+  border: none;
+
+  background-color: black;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
-.blog-button:hover{
-    color: white;
-    transition: 0.3s ease-in-out;
+.blog-button:hover {
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.read-link {
+  display: none;
+  cursor: pointer;
+}
+
+/* ----  Blog single post layout--- */
+.blog-top{
+  padding: 5em;
+  border-radius: 15px;
+}
+.blog-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.blog-left {
+  padding-top: 8em;
+}
+.blog-single-image {
+  border-radius: 15px;
+}
+.main-content {
+  margin-top: 5em;
+}
+.blog-cta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+.main-text {
+  margin-top: 3em;
+}
+.main-title {
+  margin-top: 5em;
+}
+.blog-main-intro{
+  margin: 3em;
+}
+.cta-btn{
+  margin: 5em;
+}
+/* ---media for all --- */
+
+@media (max-width: 1400px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+}
+
+@media (max-width: 1250px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+  .read-link {
+    display: block;
+  }
+}
+
+@media (max-width: 650px) {
+  .blog-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+  }
+}
+@media (max-width: 1400px) {
 }

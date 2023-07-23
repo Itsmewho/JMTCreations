@@ -134,11 +134,6 @@ const BlogIntro = () => {
                     <p className="fs-400 ">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
-                    <div className="blog-btn-layout">
-                      <button className="main-button  fs-400 shake blog-button bold">
-                        &#62;
-                      </button>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -156,11 +151,6 @@ const BlogIntro = () => {
                     <p className="fs-400 ">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
-                    <div className="blog-btn-layout">
-                      <button className="main-button  fs-400 shake blog-button bold">
-                        &#62;
-                      </button>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -178,11 +168,6 @@ const BlogIntro = () => {
                     <p className="fs-400 ">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
-                    <div className="blog-btn-layout">
-                      <button className="main-button  fs-400 shake blog-button bold">
-                        &#62;
-                      </button>
-                    </div>
                   </div>
                 </div>
               </div>

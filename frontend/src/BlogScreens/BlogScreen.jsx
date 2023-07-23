@@ -25,11 +25,11 @@ const BlogScreen = () => {
             <link rel="canonical" href="/Blog" />
             <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
           </Helmet>
-          <section className="section">
+          <section className="section-blog">
             <div className="blog-container">
               <div className="blog-grid-container">
                 <div className="blog-grid">
-                  {blog.map((blog) =>(
+                  {blog.map((blog) => (
                     <div key={blog.id} className="blog-grid-card box-shadow">
                       <BlogShorts blog={blog}></BlogShorts>
                     </div>

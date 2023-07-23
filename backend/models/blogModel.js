@@ -32,7 +32,7 @@ const blogSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    meta: {
+    alt: {
       type: String,
       required: true,
     },
