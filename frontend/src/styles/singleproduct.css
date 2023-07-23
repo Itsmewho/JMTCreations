@@ -24,15 +24,15 @@
 }
 
 .image-container {
-  margin: 0.5em;
+  margin: 1em;
   padding: 1em;
   margin: 0 auto;
   border-radius: 10px;
 }
 .single-image {
   border-radius: 10px;
-  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.2);
 }
+
 .top-content {
   padding: 3em 3em 0em 3em;
 }

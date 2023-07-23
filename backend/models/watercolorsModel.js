@@ -32,6 +32,14 @@ const watercolorsSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    meta: {
+      type: String,
+      required: true,
+    },
+    metaDescription: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

@@ -40,6 +40,8 @@
 
 .blog-middle-image {
   border-radius: 10px;
+  height: auto;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -101,7 +103,7 @@
   .blog-title {
     margin-right: 13%;
   }
-  .blog-short-text{
+  .blog-short-text {
     margin-top: 2em;
   }
   .intro-blog-layout {

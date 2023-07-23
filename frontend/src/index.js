@@ -13,7 +13,7 @@ import store from "./store.js";
 import "./index.css";
 import App from "./App";
 import HomeScreen from "./screens/HomeScreen.jsx";
-import MainBlogScreen from "./screens/MainBlogScreen.jsx";
+import BlogScreen from "./BlogScreens/BlogScreen.jsx"
 import CategoryScreen from "./screens/CategoryScreen.jsx";
 import LoginScreen from "./screens/LoginScreen.jsx";
 import ShoppingCartScreen from "./screens/ShoppingCartScreen.jsx";
@@ -38,7 +38,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<HomeScreen />} />
-      <Route path="/BlogPage" element={<MainBlogScreen />} />
+      <Route path="/BlogPage" element={<BlogScreen />} />
       <Route path="/Shop" element={<CategoryScreen />} />
       <Route path="/Login" element={<LoginScreen />} />
       <Route path="/Cart" element={<ShoppingCartScreen />} />

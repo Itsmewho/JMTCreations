@@ -110,6 +110,7 @@ const BlogIntro = () => {
           <div className="blog-intro-image">
             <Tilt tiltReverse={true}>
               <img
+                loading="lazy"
                 className="blog-middle-image box-shadow "
                 src={MyCollection[item].imgPath}
                 alt={MyCollection[item].label}
@@ -123,6 +124,7 @@ const BlogIntro = () => {
                 <div className="flex artikel-image">
                   <Tilt tiltReverse={true}>
                     <img
+                      loading="lazy"
                       src={Dansers}
                       alt="abstract couple dancing"
                       className="artikel-intro-img box-shadow "
@@ -144,6 +146,7 @@ const BlogIntro = () => {
                 <div className="flex artikel-image">
                   <Tilt tiltReverse={true}>
                     <img
+                      loading="lazy"
                       src={Express}
                       alt="expression of a man"
                       className="artikel-intro-img box-shadow"
@@ -165,6 +168,7 @@ const BlogIntro = () => {
                 <div className="flex artikel-image">
                   <Tilt tiltReverse={true}>
                     <img
+                      loading="lazy"
                       src={Snake}
                       alt="girl with a snake skin"
                       className="artikel-intro-img box-shadow"

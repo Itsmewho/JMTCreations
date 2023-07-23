@@ -55,6 +55,8 @@
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   margin-right: 5em;
+  height: auto;
+  width: 90%;
   rotate: 6deg;
   max-height: 500px;
   cursor: pointer;
@@ -83,7 +85,7 @@
   .leftside-book {
     width: 50%;
   }
-  .mobile{
+  .mobile {
     display: none;
   }
 }

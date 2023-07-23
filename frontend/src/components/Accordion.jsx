@@ -21,9 +21,24 @@ const Accordion = ({ data }) => {
       {show && (
         <div className="accordian-body">
           <div className="flex image-show">
-            <img className="image-size" src={data.img} alt={data.alt} />
-            <img className="image-size" src={data.img1} alt={data.alt} />
-            <img className="image-size" src={data.img2} alt={data.alt} />
+            <img
+              loading="lazy"
+              className="image-size"
+              src={data.img}
+              alt={data.alt}
+            />
+            <img
+              loading="lazy"
+              className="image-size"
+              src={data.img1}
+              alt={data.alt}
+            />
+            <img
+              loading="lazy"
+              className="image-size"
+              src={data.img2}
+              alt={data.alt}
+            />
           </div>
           <p>{data.answers}</p>
           <p>{data.answers2}</p>

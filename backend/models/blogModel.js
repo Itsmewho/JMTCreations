@@ -1,7 +1,7 @@
 /** @format */
 import mongoose from "mongoose";
 
-const fullbodySchema = new mongoose.Schema(
+const blogSchema = new mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
@@ -20,15 +20,15 @@ const fullbodySchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    description: {
+    subheader: {
       type: String,
       required: true,
     },
-    alt: {
+    maincontent: {
       type: String,
       required: true,
     },
-    slogan: {
+    shorttext: {
       type: String,
       required: true,
     },
@@ -46,6 +46,6 @@ const fullbodySchema = new mongoose.Schema(
   }
 );
 
-const Fullbody = mongoose.model("Fullbody", fullbodySchema);
+const Blog = mongoose.model("Blog", blogSchema);
 
-export default Fullbody;
+export default Blog;

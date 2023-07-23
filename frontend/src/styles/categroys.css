@@ -29,7 +29,6 @@
   padding: 1em;
   cursor: pointer;
   height: 750px;
-  
 }
 .grid-block:hover {
   background-color: hsl(206, 45%, 21%);
@@ -42,7 +41,7 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 1em;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   height: 93%;
 }

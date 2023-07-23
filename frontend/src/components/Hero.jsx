@@ -14,8 +14,15 @@ const Hero = () => {
       <div className="hero-grid">
         <div className="hero-column">
           <picture className="hero-image">
-            <source srcSet={JMT} media="(min-width: 1250px" />
+            <source
+              rel="preload"
+              as="image"
+              srcSet={JMT}
+              media="(min-width: 1250px"
+            />
             <img
+              rel="preload"
+              as="image"
               src={JMTMobile}
               alt="JMT-Creations standing by a waterfall in the mountains"
             />

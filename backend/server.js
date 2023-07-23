@@ -13,6 +13,7 @@ import popanimeRoutes from "./routes/popanimeRoutes.js";
 import watercolorsRoutes from "./routes/watercolorsRoutes.js";
 import randomRoutes from "./routes/randomRoutes.js";
 import fullbodyRoutes from "./routes/fullbodyRoutes.js";
+import blogRoutes from "./routes/blogRoutes.js";
 
 // connections ->
 
@@ -49,5 +50,9 @@ app.use(`/api/random`, randomRoutes);
 // for the expression file
 
 app.use(`/api/expression`, expressionRoutes);
+
+// for the blog file
+
+app.use(`/api/blog`, blogRoutes);
 
 app.listen(port, () => console.log(`server is running on port: ${port}`));

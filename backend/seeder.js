@@ -12,11 +12,13 @@ import watercolors from "./data/watercolors.js";
 import fullbody from "./data/fullbody.js";
 import random from "./data/random.js";
 import popanime from "./data/popanime.js";
+import blog from "./data/blog.js";
 import expression from "./data/expression.js";
 import User from "./models/userModel.js";
 
 //models ->
 
+import Blog from "./models/blogModel.js";
 import Abstract from "./models/abstractModel.js";
 import Expression from "./models/expressionModel.js";
 import Fullbody from "./models/fullbodyModel.js";
@@ -40,6 +42,7 @@ const importData = async () => {
     await Abstract.deleteMany();
     await Popanime.deleteMany();
     await User.deleteMany();
+    await Blog.deleteMany();
 
     const createdUsers = await User.insertMany(users);
 
@@ -74,6 +77,11 @@ const importData = async () => {
       return { ...popanime, user: adminUser };
     });
     await Popanime.insertMany(samplePopanime);
+
+    const sampleBlog = blog.map((blog) => {
+      return { ...blog, user: adminUser };
+    });
+    await Blog.insertMany(sampleBlog);
 
     console.log("Data imported!".green.inverse);
   } catch (error) {

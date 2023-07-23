@@ -3,10 +3,10 @@
 :root {
   /* -----colors----- */
   --clr-white: hsl(90, 100%, 96%);
-  --clr-rich-black: hsl(204, 49%, 13%);
-  --clr-dark-blue: hsl(205, 50%, 18%);
-  --clr-brown: hsl(30, 90%, 65%);
-  --clr-green: hsl(105, 70%, 65%);
+  --clr-rich-black: hsl(204, 49%, 11%);
+  --clr-dark-blue: hsl(205, 50%, 16%);
+  --clr-brown: hsl(30, 89%, 65%);
+  --clr-green: hsl(108, 72%, 66%);
   --clr-border: hsla(215, 100%, 88%, 0.34);
 
   /* colors: for black and white just use the css property */

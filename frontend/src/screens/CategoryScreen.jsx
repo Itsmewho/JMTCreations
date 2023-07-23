@@ -25,6 +25,7 @@ const CategoryScreen = () => {
                 <div className="cart-content">
                   <Tilt titlReverse={true}>
                     <img
+                      loading="lazy"
                       className="cart-image"
                       src={beautiful}
                       alt="A striking portrait in an expressionism style oil painting. The subject's face is a combination of hyperrealism and abstract expressionism, with visible brush strokes and vivid colors. The composition is dynamic, featuring high contrast and resplendent use of light, evoking an intriguing and mysterious atmosphere."
@@ -58,6 +59,7 @@ const CategoryScreen = () => {
                 <div className="cart-content">
                   <Tilt titlReverse={true}>
                     <img
+                      loading="lazy"
                       className="cart-image"
                       src={glasses}
                       alt="An explosion of vibrant colors and energetic characters representing Pop Anime Art."
@@ -91,6 +93,7 @@ const CategoryScreen = () => {
                 <div className="cart-content">
                   <Tilt titlReverse={true}>
                     <img
+                      loading="lazy"
                       className="cart-image"
                       src={persian}
                       alt="An abstract watercolor painting showcasing a lively blend of vibrant colors and fluid brushstrokes. The artwork evokes a sense of imagination and creative freedom"
@@ -158,6 +161,7 @@ const CategoryScreen = () => {
                 <div className="cart-content">
                   <Tilt titlReverse={true}>
                     <img
+                      loading="lazy"
                       className="cart-image"
                       src={expression}
                       alt="The artwork's expressive energy transcends reality, inviting viewers to explore boundless realms of imagination. It whispers stories of joy, passion, and introspection, captivating the senses with its untamed beauty."
@@ -190,6 +194,7 @@ const CategoryScreen = () => {
                 <div className="cart-content">
                   <Tilt titlReverse={true}>
                     <img
+                      loading="lazy"
                       className="cart-image"
                       src={random}
                       alt="A fusion of styles, 'whater-ever-you-make-it', art defies definition. A captivating visual journey that inspires, provokes, and delights"
