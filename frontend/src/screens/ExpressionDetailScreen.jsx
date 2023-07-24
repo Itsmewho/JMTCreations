@@ -2,8 +2,9 @@
 
 import React from "react";
 import "../styles/singleproduct.css";
-import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../slices/cartSlice";
 import Tilt from "react-parallax-tilt";
 import Accordion from "../components/Accordion";
 import data from "../accordion";
@@ -13,14 +14,19 @@ import { Helmet } from "react-helmet-async";
 const ExpressionDetailScreen = () => {
   const { id: expressionId } = useParams();
 
-  const [qty, setQty] = useState(1);
-  
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const {
     data: expression,
     isLoading,
     error,
   } = useGetExpressionDetailsQuery(expressionId);
+
+  const addToCartHandler = () => {
+    dispatch(addToCart({ ...expression }));
+    navigate("/Cart");
+  };
 
   return (
     <>
@@ -67,8 +73,14 @@ const ExpressionDetailScreen = () => {
                 </div>
                 <div className="top-content">
                   <p className="fs-400">{expression.alt}</p>
+                  <div className="fs-400 padding">
+                    Only for : {expression.price}$
+                  </div>
                   <div className="button-container-top">
-                    <button className="main-button ff-serif uppercase shake">
+                    <button
+                      className="main-button ff-serif uppercase shake"
+                      type="button"
+                      onClick={addToCartHandler}>
                       Add to cart
                     </button>
                   </div>

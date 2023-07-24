@@ -1,7 +1,9 @@
 /** @format */
 import React from "react";
 import "../styles/singleproduct.css";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../slices/cartSlice";
 import Tilt from "react-parallax-tilt";
 import Accordion from "../components/Accordion";
 import data from "../accordion";
@@ -10,11 +12,19 @@ import { Helmet } from "react-helmet-async";
 
 const WaterColorsDetailScreen = () => {
   const { id: watercolorsId } = useParams();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const {
     data: watercolors,
     isLoading,
     error,
   } = useGetWatercolorsDetailsQuery(watercolorsId);
+
+  const addToCartHandler = () => {
+    dispatch(addToCart({ ...watercolors }));
+    navigate("/Cart");
+  };
 
   return (
     <>
@@ -27,7 +37,10 @@ const WaterColorsDetailScreen = () => {
           <Helmet>
             <title>JMT-Creations | {watercolors.name}</title>
             <meta name="description" content={watercolors.metaDescription} />
-            <link rel="canonical" href={`/product/watercolors/${watercolors._id}`} />
+            <link
+              rel="canonical"
+              href={`/product/watercolors/${watercolors._id}`}
+            />
             <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
           </Helmet>
           <section className="section-single">
@@ -57,8 +70,14 @@ const WaterColorsDetailScreen = () => {
                 </div>
                 <div className="top-content">
                   <p className="fs-400">{watercolors.alt}</p>
+                  <div className="fs-400 padding">
+                    Only for : {watercolors.price}$
+                  </div>
                   <div className="button-container-top">
-                    <button className="main-button ff-serif uppercase shake">
+                    <button
+                      className="main-button ff-serif uppercase shake"
+                      type="button"
+                      onClick={addToCartHandler}>
                       Add to cart
                     </button>
                   </div>

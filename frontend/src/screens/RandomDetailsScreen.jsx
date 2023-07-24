@@ -2,7 +2,9 @@
 
 import React from "react";
 import "../styles/singleproduct.css";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../slices/cartSlice";
 import Tilt from "react-parallax-tilt";
 import Accordion from "../components/Accordion";
 import data from "../accordion";
@@ -11,7 +13,15 @@ import { Helmet } from "react-helmet-async";
 
 const RandomDetailsScreen = () => {
   const { id: randomId } = useParams();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const { data: random, isLoading, error } = useGetRandomDetailsQuery(randomId);
+
+  const addToCartHandler = () => {
+    dispatch(addToCart({ ...random }));
+    navigate("/Cart");
+  };
 
   return (
     <>
@@ -54,8 +64,14 @@ const RandomDetailsScreen = () => {
                 </div>
                 <div className="top-content">
                   <p className="fs-400">{random.alt}</p>
+                  <div className="fs-400 padding">
+                    Only for : {random.price}$
+                  </div>
                   <div className="button-container-top">
-                    <button className="main-button ff-serif uppercase shake">
+                    <button
+                      className="main-button ff-serif uppercase shake"
+                      type="button"
+                      onClick={addToCartHandler}>
                       Add to cart
                     </button>
                   </div>

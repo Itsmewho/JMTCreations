@@ -2,7 +2,9 @@
 
 import React from "react";
 import "../styles/singleproduct.css";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../slices/cartSlice";
 import Tilt from "react-parallax-tilt";
 import Accordion from "../components/Accordion";
 import data from "../accordion";
@@ -11,11 +13,19 @@ import { Helmet } from "react-helmet-async";
 
 const PopDetailScreen = () => {
   const { id: popanimeId } = useParams();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const {
     data: popanime,
     isLoading,
     error,
   } = useGetPopanimeDetailsQuery(popanimeId);
+
+  const addToCartHandler = () => {
+    dispatch(addToCart({ ...popanime }));
+    navigate("/Cart");
+  };
 
   return (
     <>
@@ -58,8 +68,14 @@ const PopDetailScreen = () => {
                 </div>
                 <div className="top-content">
                   <p className="fs-400">{popanime.alt}</p>
+                  <div className="fs-400 padding">
+                    Only for : {popanime.price}$
+                  </div>
                   <div className="button-container-top">
-                    <button className="main-button ff-serif uppercase shake">
+                    <button
+                      className="main-button ff-serif uppercase shake"
+                      type="button"
+                      onClick={addToCartHandler}>
                       Add to cart
                     </button>
                   </div>
