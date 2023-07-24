@@ -32,10 +32,17 @@ const cartSlice = createSlice({
         state.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
       );
       // tax items price:
+      state.taxPrice = addDecimals(Number((0.21 * state.itemPrice).toFixed(2)));
 
       // total items price:
+      state.TotalPrice = (
+        Number(state.itemPrice) + Number(state.taxPrice)
+      ).toFixed(2);
+
+      localStorage.setItem("cart", JSON.stringify(state));
     },
   },
 });
+export const { addToCart } = cartSlice.actions;
 
 export default cartSlice.reducer;

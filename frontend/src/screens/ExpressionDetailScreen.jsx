@@ -2,6 +2,7 @@
 
 import React from "react";
 import "../styles/singleproduct.css";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Tilt from "react-parallax-tilt";
 import Accordion from "../components/Accordion";
@@ -11,6 +12,9 @@ import { Helmet } from "react-helmet-async";
 
 const ExpressionDetailScreen = () => {
   const { id: expressionId } = useParams();
+
+  const [qty, setQty] = useState(1);
+  
 
   const {
     data: expression,
