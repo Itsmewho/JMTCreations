@@ -20,17 +20,14 @@ const FullbodyDetailScreen = () => {
   return (
     <>
       {isLoading ? (
-        <h2>Loading,...</h2>
+        <h2 className="layout-shift">Loading,...</h2>
       ) : error ? (
         <div> {error?.data?.message || error.error}</div>
       ) : (
         <>
           <Helmet>
             <title>JMT-Creations | {fullbody.name}</title>
-            <meta
-              name="description"
-              content={fullbody.metaDescription}
-            />
+            <meta name="description" content={fullbody.metaDescription} />
             <link rel="canonical" href={`/product/fullbody/${fullbody._id}`} />
             <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
           </Helmet>

@@ -1,4 +1,7 @@
 /** @format */
+.layout-shift {
+  min-height: 100vh;
+}
 
 .section-cat {
   margin: 0 6%;
@@ -57,7 +60,7 @@
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   border-top: 1px solid var(--clr-white);
-  height: 110px
+  height: 110px;
 }
 .cart-style {
   border-top: 1px solid var(--clr-white);

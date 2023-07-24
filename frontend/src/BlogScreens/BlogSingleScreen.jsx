@@ -4,6 +4,8 @@ import React from "react";
 import "../styles/bloglayout.css";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Tilt from "react-parallax-tilt";
+
 import { useGetBlogDetailsQuery } from "../slices/blogApiSlice.js";
 import { Helmet } from "react-helmet-async";
 
@@ -13,7 +15,7 @@ const BlogSingleScreen = () => {
   return (
     <>
       {isLoading ? (
-        <h2>Loading,...</h2>
+        <h2 className="layout-shift">Loading,...</h2>
       ) : error ? (
         <div> {error?.data?.message || error.error}</div>
       ) : (
@@ -37,17 +39,19 @@ const BlogSingleScreen = () => {
                   </h2>
                 </div>
                 <div>
-                  <picture className="blog-single-image box-shadow">
-                    <source
-                      srcSet={blog.imagelong}
-                      media="(min-width: 1250px"
-                    />
-                    <img
-                      className="blog-single-image"
-                      src={blog.image}
-                      alt={blog.alt}
-                    />
-                  </picture>
+                  <Tilt tiltReverse={true}>
+                    <picture className="blog-single-image box-shadow">
+                      <source
+                        srcSet={blog.imagelong}
+                        media="(min-width: 1250px"
+                      />
+                      <img
+                        className="blog-single-image"
+                        src={blog.image}
+                        alt={blog.alt}
+                      />
+                    </picture>
+                  </Tilt>
                 </div>
               </div>
               <div className="main-content">

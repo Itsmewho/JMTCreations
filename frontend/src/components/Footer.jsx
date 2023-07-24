@@ -21,7 +21,7 @@ const Footer = () => {
             <a
               className="social ff-sans fs-400 text-white hover-text"
               href="https://www.google.com/">
-              Li
+              Pi
             </a>
             <a
               className="social ff-sans fs-400 text-white hover-text"

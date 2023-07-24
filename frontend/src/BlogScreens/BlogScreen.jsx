@@ -4,6 +4,7 @@ import React from "react";
 import "../styles/bloglayout.css";
 import { useGetBlogQuery } from "../slices/blogApiSlice";
 import BlogShorts from "../components/BlogShorts";
+
 import { Helmet } from "react-helmet-async";
 
 const BlogScreen = () => {
@@ -11,7 +12,7 @@ const BlogScreen = () => {
   return (
     <>
       {isLoading ? (
-        <h2>Loading,...</h2>
+        <h2 className="layout-shift">Loading,...</h2>
       ) : error ? (
         <div> {error?.data?.message || error.error}</div>
       ) : (
@@ -26,6 +27,9 @@ const BlogScreen = () => {
             <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
           </Helmet>
           <section className="section-blog">
+            <div className="blog-intro-title">
+              <h1 className="fs-900 text-brown intro-title">Blog</h1>
+            </div>
             <div className="blog-container">
               <div className="blog-grid-container">
                 <div className="blog-grid">

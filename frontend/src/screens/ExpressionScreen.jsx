@@ -11,7 +11,7 @@ const ExpressionScreen = () => {
   return (
     <>
       {isLoading ? (
-        <h2>Loading,...</h2>
+        <h2 className="layout-shift">Loading,...</h2>
       ) : error ? (
         <div> {error?.data?.message || error.error}</div>
       ) : (

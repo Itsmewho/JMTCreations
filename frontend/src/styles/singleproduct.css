@@ -1,5 +1,7 @@
 /** @format */
-
+.layout-shift {
+  min-height: 100vh;
+}
 .section-single {
   margin: 0 6%;
 }
