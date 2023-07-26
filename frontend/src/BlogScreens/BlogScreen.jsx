@@ -24,7 +24,7 @@ const BlogScreen = () => {
               content="Dive into the realm of digital art through our blog. Explore insightful articles and inspiration, unraveling the boundless creativity of the digital medium"
             />
             <link rel="canonical" href="/Blog" />
-            <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
+            <link rel="shortcut icon" href="./Favicon.svg" type="icon.svg" />
           </Helmet>
           <section className="section-blog">
             <div className="blog-intro-title">
@@ -34,7 +34,7 @@ const BlogScreen = () => {
               <div className="blog-grid-container">
                 <div className="blog-grid">
                   {blog.map((blog) => (
-                    <div key={blog.id} className="blog-grid-card box-shadow">
+                    <div key={blog._id} className="blog-grid-card box-shadow">
                       <BlogShorts blog={blog}></BlogShorts>
                     </div>
                   ))}

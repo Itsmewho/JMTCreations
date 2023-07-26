@@ -24,7 +24,7 @@ const RandomScreen = () => {
               content="Experience a world of creativity with our diverse digital art prints. Discover captivating masterpieces that resonate with your style and add flair to your spaces."
             />
             <link rel="canonical" href="/Random" />
-            <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
+            <link rel="shortcut icon" href="./Favicon.svg" type="icon.svg" />
           </Helmet>
           <section className="section-cat">
             <div className=" flex center">

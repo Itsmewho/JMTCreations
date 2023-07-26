@@ -11,7 +11,7 @@ const abstract = [
     slogan: "Embrace the Colors, Ignite Your Imagination!",
     meta: "hello",
     metaDescription: "hello world",
-    price: "6,99",
+    price: "6.99",
   },
   {
     name: "Pop Anime",
@@ -23,7 +23,7 @@ const abstract = [
     slogan: "Pop Anime Art: Where Colors Collide, Imagination Thrives!",
     meta: "hello",
     metaDescription: "hello world",
-    price: "6,99",
+    price: "6.99",
   },
   {
     name: "Watercolors",
@@ -35,7 +35,7 @@ const abstract = [
     slogan: "Your Imagination with Abstract Watercolors!",
     meta: "hello",
     metaDescription: "hello world",
-    price: "6,99",
+    price: "6.99",
   },
   {
     name: "Dancing",
@@ -47,7 +47,7 @@ const abstract = [
     slogan: "Brushstrokes of Life, Where Colors Dance",
     meta: "hello",
     metaDescription: "hello world",
-    price: "6,99",
+    price: "6.99",
   },
   {
     name: "Expressions",
@@ -59,7 +59,7 @@ const abstract = [
     slogan: "Embrace the Abstract Symphony!",
     meta: "hello",
     metaDescription: "hello world",
-    price: "6,99",
+    price: "6.99",
   },
   {
     name: "Random",
@@ -71,7 +71,7 @@ const abstract = [
     slogan: "Unleash the Unexpected!",
     meta: "hello",
     metaDescription: "hello world",
-    price: "6,99",
+    price: "6.99",
   },
 ];
 

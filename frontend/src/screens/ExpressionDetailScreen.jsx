@@ -2,7 +2,7 @@
 
 import React from "react";
 import "../styles/singleproduct.css";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../slices/cartSlice";
 import Tilt from "react-parallax-tilt";
@@ -15,7 +15,6 @@ const ExpressionDetailScreen = () => {
   const { id: expressionId } = useParams();
 
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const {
     data: expression,
@@ -24,8 +23,15 @@ const ExpressionDetailScreen = () => {
   } = useGetExpressionDetailsQuery(expressionId);
 
   const addToCartHandler = () => {
+    let change = document.getElementById("change");
+    const initailText = change.innerText;
+    change.innerText = "Done";
+
+    setTimeout(() => {
+      change.innerText = initailText;
+    }, 1000);
+
     dispatch(addToCart({ ...expression }));
-    navigate("/Cart");
   };
 
   return (
@@ -78,6 +84,7 @@ const ExpressionDetailScreen = () => {
                   </div>
                   <div className="button-container-top">
                     <button
+                      id="change"
                       className="main-button ff-serif uppercase shake"
                       type="button"
                       onClick={addToCartHandler}>

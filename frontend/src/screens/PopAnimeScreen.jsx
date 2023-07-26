@@ -23,8 +23,8 @@ const PopAnimeScreen = () => {
               name="description"
               content="Immerse yourself in the vibrant world of Pop anime art with our captivating digital prints. Explore unique and colorful artworks inspired by beloved anime characters and culture."
             />
-            <link rel="canonical" href="/PopAnime" />
-            <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
+            <link rel="canonical" href="./PopAnime" />
+            <link rel="shortcut icon" href="./Favicon.svg" type="icon.svg" />
           </Helmet>
           <section className="section-cat">
             <div className=" flex center">

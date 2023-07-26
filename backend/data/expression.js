@@ -12,7 +12,7 @@ const expression = [
     meta: "hello",
     metaDescription: "hello world",
     metaTitle: "hello world",
-    price: "6,99",
+    price: "6.99",
   },
   {
     name: "Pop Anime",
@@ -25,7 +25,7 @@ const expression = [
     meta: "hello",
     metaDescription: "hello world",
     metaTitle: "hello world",
-    price: "6,99",
+    price: "6.99",
   },
   {
     name: "Watercolors",
@@ -38,7 +38,7 @@ const expression = [
     meta: "hello",
     metaDescription: "hello world",
     metaTitle: "hello world",
-    price: "6,99",
+    price: "6.99",
   },
   {
     name: "Dancing",
@@ -51,7 +51,7 @@ const expression = [
     meta: "hello",
     metaDescription: "hello world",
     metaTitle: "hello world",
-    price: "6,99",
+    price: "6.99",
   },
   {
     name: "Expressions",
@@ -63,7 +63,7 @@ const expression = [
     slogan: "Embrace the Abstract Symphony!",
     meta: "hello",
     metaDescription: "hello world",
-    price: "6,99",
+    price: "6.99",
   },
   {
     name: "Random",
@@ -75,7 +75,7 @@ const expression = [
     slogan: "Unleash the Unexpected!",
     meta: "hello",
     metaDescription: "hello world",
-    price: "6,99",
+    price: "6.99",
   },
 ];
 

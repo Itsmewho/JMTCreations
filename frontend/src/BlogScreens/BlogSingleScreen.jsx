@@ -24,7 +24,7 @@ const BlogSingleScreen = () => {
             <title>JMT-Creations | {blog.name}</title>
             <meta name="description" content={blog.metaDescription} />
             <link rel="canonical" href={`/blog/blogpost/${blog._id}`} />
-            <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
+            <link rel="shortcut icon" href="./Favicon.svg" type="icon.svg" />
           </Helmet>
 
           <section className="section-single-blog">

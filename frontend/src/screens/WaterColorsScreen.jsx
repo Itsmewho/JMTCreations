@@ -24,7 +24,7 @@ const WaterColorScreen = () => {
               content="Explore the world of digital watercolor prints - a fusion of charm and modern technology. Discover your favorite masterpiece today!"
             />
             <link rel="canonical" href="/Watercolors" />
-            <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
+            <link rel="shortcut icon" href="./Favicon.svg" type="icon.svg" />
           </Helmet>
           <link rel="canonical" href="/" />
           <section className="section-cat">

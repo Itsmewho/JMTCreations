@@ -1,6 +1,7 @@
 /** @format */
 
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { Twirl as Hamburger } from "hamburger-react";
 import cartBlack from "../assets/shopping.svg";

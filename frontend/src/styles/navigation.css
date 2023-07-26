@@ -26,6 +26,7 @@
   background: transparent;
   margin-inline-end: 1em;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 .navigation-open button:hover {
   color: var(--clr-brown);
@@ -42,6 +43,7 @@
   text-decoration: none;
   margin-inline-end: 1em;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 .navigation button:hover {
   color: var(--clr-brown);
@@ -86,7 +88,7 @@
     transform: translateY(-100%);
     transition: transform 0.5s ease-in-out;
   }
-  
+
   .navigation-open {
     display: flex;
     position: fixed;

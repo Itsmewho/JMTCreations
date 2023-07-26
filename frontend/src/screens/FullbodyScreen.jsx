@@ -24,7 +24,7 @@ const FullbodyScreen = () => {
               content="The essence of life with our digital prints of full-body portraits. Explore captivating artworks that celebrate the beauty and diversity of the human form."
             />
             <link rel="canonical" href="/Fullbody" />
-            <link rel="shortcut icon" href="Favicon.svg" type="icon.svg" />
+            <link rel="shortcut icon" href="./Favicon.svg" type="icon.svg" />
           </Helmet>
           <section className="section-cat">
             <div className=" flex center">
