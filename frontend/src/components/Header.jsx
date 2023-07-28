@@ -11,7 +11,6 @@ import "../styles/navigation.css";
 const Header = () => {
   const [isActive, setActive] = useState(true);
   const [over, setOver] = useState(false);
-
   const navToggle = () => {
     setActive(!isActive);
   };
