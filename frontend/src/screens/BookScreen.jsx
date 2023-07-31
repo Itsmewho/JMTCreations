@@ -56,32 +56,38 @@ const BookScreen = () => {
       </Helmet>
       <section className="section">
         <div className="book-page box-shadow">
-          <div className="flex">
+          <div className="flex book-top-section">
             <div className="book-leftside-2">
-              <h1 className="fs-800 text-brown text-shadow">
+              <h1 className="fs-800 text-brown text-shadow book-page-title">
                 - Divide And Qonquer
               </h1>
-              <h2 className="fs-600 text-green">A New World</h2>
-              <p className="text-white fs-400">
+              <h2 className="fs-600 text-green book-page-subtitle">
+                A New World
+              </h2>
+              <p className="text-white fs-400 book-page-paragraph-top">
                 Divide And Conquer: The Road to Superintelligence. This book
                 explores the history and development of AI, as well as its
                 ethical implications and potential impact on society. It's a
                 must-read for anyone interested in technology, science, or the
                 future of humanity.
               </p>
-              <p className="book-price fs-400">For only: 9,99$</p>
-              <Link to={"/Cart"}>
-                <button className="book-button-2 fs-400 shake">
-                  Add To cart
-                </button>
-              </Link>
+              <p className="book-price fs-400 book-page-price">
+                For only: 9,99$
+              </p>
+              <div className="book-page-cta">
+                <Link to={"/Cart"}>
+                  <button className="book-button-2 fs-400 shake">
+                    Add To cart
+                  </button>
+                </Link>
+              </div>
             </div>
             <div className="book-rightside-2">
               <div className="book-grid-2">
                 <div className="book-flex-2">
                   <div className="book-button-center">
                     <button
-                      className="book-button-2 fs-400 text-dark shake"
+                      className="book-button-2 prev-btn fs-400 text-dark shake"
                       onClick={PreSlide}>
                       Prev
                     </button>
@@ -97,7 +103,7 @@ const BookScreen = () => {
                   </div>
                   <div className="book-button-center">
                     <button
-                      className="book-button-2 fs-400 text-dark shake"
+                      className="book-button-2 prev-btn fs-400 text-dark shake"
                       onClick={NextSlide}>
                       Next
                     </button>
@@ -136,8 +142,10 @@ const BookScreen = () => {
             </div>
           </div>
           <div className="book-description">
-            <h3 className="fs-600 text-green">Description:</h3>
-            <p className="fs-400 text-white">
+            <h3 className="fs-600 text-green book-paragraph-description">
+              Description:
+            </h3>
+            <p className="fs-400 text-white book-page-paragraph">
               Looking for a book that will blow your mind and leave you with a
               new perspective on the world around you? Look no further than
               "Divide And Qonquer". This book is a captivating journey into the
