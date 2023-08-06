@@ -11,6 +11,7 @@ export const EXPRESSION_URL = "/api/expression";
 export const WATERCOLORS_URL = "/api/watercolors";
 export const POPANIME_URL = "/api/popanime";
 export const BLOG_URL = "/api/blog";
+export const BOOK_URL = "/api/book";
 
 // UserAccounts / paypall -->
 export const USERS_URL = "/api/users";

@@ -45,6 +45,11 @@ const orderSchema = mongoose.Schema(
           required: true,
           ref: "Popanime",
         },
+        book: {
+          type: mongoose.Schema.Types.ObjectId,
+          required: true,
+          ref: "Book",
+        },
       },
     ],
     shippingAddres: {
@@ -68,7 +73,7 @@ const orderSchema = mongoose.Schema(
       default: 0.0,
     },
     taxPrice: {
-      type: String,
+      type: Number,
       required: true,
       default: 0.0,
     },

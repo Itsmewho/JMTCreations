@@ -16,6 +16,7 @@ export const apiSlice = createApi({
     "Popanime",
     "User",
     "Blog",
+    "Book",
   ],
   endpoints: (builder) => ({}),
 });

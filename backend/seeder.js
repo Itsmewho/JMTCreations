@@ -6,6 +6,7 @@ import colors from "colors";
 
 // data--->
 
+import book from "./data/book.js";
 import users from "./data/users.js";
 import abstract from "./data/abstract.js";
 import watercolors from "./data/watercolors.js";
@@ -18,6 +19,7 @@ import User from "./models/userModel.js";
 
 //models ->
 
+import Book from "./models/bookModel.js";
 import Blog from "./models/blogModel.js";
 import Abstract from "./models/abstractModel.js";
 import Expression from "./models/expressionModel.js";
@@ -43,6 +45,7 @@ const importData = async () => {
     await Popanime.deleteMany();
     await User.deleteMany();
     await Blog.deleteMany();
+    await Book.deleteMany();
 
     const createdUsers = await User.insertMany(users);
 
@@ -83,6 +86,11 @@ const importData = async () => {
     });
     await Blog.insertMany(sampleBlog);
 
+    const sampleBook = book.map((book) => {
+      return { ...book, user: adminUser };
+    });
+    await Book.insertMany(sampleBook);
+
     console.log("Data imported!".green.inverse);
   } catch (error) {
     console.error(`${error}`.red.inverse);
@@ -100,6 +108,7 @@ const destroyData = async () => {
     await Abstract.deleteMany();
     await Popanime.deleteMany();
     await User.deleteMany();
+    await Book.deleteMany();
 
     console.log("Data destroyed!".red.inverse);
     process.exit(1);

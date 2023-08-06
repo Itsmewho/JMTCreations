@@ -14,6 +14,7 @@ import watercolorsRoutes from "./routes/watercolorsRoutes.js";
 import randomRoutes from "./routes/randomRoutes.js";
 import fullbodyRoutes from "./routes/fullbodyRoutes.js";
 import blogRoutes from "./routes/blogRoutes.js";
+import bookRoutes from "./routes/bookRoutes.js";
 
 // connections ->
 
@@ -54,5 +55,9 @@ app.use(`/api/expression`, expressionRoutes);
 // for the blog file
 
 app.use(`/api/blog`, blogRoutes);
+
+// for the book file
+
+app.use(`/api/book`, bookRoutes);
 
 app.listen(port, () => console.log(`server is running on port: ${port}`));

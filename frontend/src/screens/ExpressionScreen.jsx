@@ -22,7 +22,7 @@ const ExpressionScreen = () => {
               name="description"
               content="Experience the emotive power of expression art through our stunning digital prints. Discover visuals that evoke emotions and add a unique touch to your space."
             />
-            <link rel="canonical" href="./Expression" />
+            <link rel="canonical" href="/Expression" />
             <link rel="shortcut icon" href="./Favicon.svg" type="icon.svg" />
           </Helmet>
           <section className="section-cat">
