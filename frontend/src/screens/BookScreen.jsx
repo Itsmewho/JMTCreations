@@ -3,7 +3,7 @@
 import "../styles/bookscreen.css";
 import { Helmet } from "react-helmet-async";
 import React, { useState } from "react";
-import { useGetBookQuery } from "../slices/bookApiSlice";
+import { useGetBookDetailsQuery } from "../slices/bookApiSlice";
 import Bookcover from "../assets/Book-cover-jmtcreations.webp";
 import text from "../assets/text-part.jpg";
 import intro from "../assets/Intro.jpg";
@@ -36,7 +36,7 @@ const BookScreen = () => {
   const { id: bookId } = useParams();
   const dispatch = useDispatch();
 
-  const { data: book, isLoading, error } = useGetBookQuery(bookId);
+  const { data: book, isLoading, error } = useGetBookDetailsQuery(bookId);
 
   const [item, setItem] = useState(0);
   const length = MyBookCollection.length;
@@ -66,7 +66,7 @@ const BookScreen = () => {
   return (
     <>
       {isLoading ? (
-        <h2 className="layout-shift">Loading,...</h2>
+        <h2 className="layout-shift"></h2>
       ) : error ? (
         <div> {error?.data?.message || error.error}</div>
       ) : (

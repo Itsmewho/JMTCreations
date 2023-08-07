@@ -15,6 +15,7 @@ export const apiSlice = createApi({
     "Watercolors",
     "Popanime",
     "User",
+    "Order",
     "Blog",
     "Book",
   ],

@@ -1,6 +1,6 @@
 /** @format */
 
-export const BASE_URL = '';
+export const BASE_URL = "";
 
 //products ->
 
@@ -14,5 +14,6 @@ export const BLOG_URL = "/api/blog";
 export const BOOK_URL = "/api/book";
 
 // UserAccounts / paypall -->
+export const ORDERS_URL = "/api/orders";
 export const USERS_URL = "/api/users";
 export const PAYPALL_URL = "/api/config/paypal";

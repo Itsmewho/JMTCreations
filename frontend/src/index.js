@@ -44,7 +44,7 @@ const router = createBrowserRouter(
       <Route path="/Shop" element={<CategoryScreen />} />
       <Route path="/Login" element={<LoginScreen />} />
       <Route path="/Cart" element={<ShoppingCartScreen />} />
-      <Route path="/Book" element={<BookScreen />} />
+      <Route path="/Book/:id" element={<BookScreen />} />
       <Route path="/Portraits" element={<PortraitScreen />} />
       <Route path="/Watercolors" element={<WaterColorsScreen />} />
       <Route path="/Random" element={<RandomScreen />} />
