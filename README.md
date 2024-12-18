@@ -1,2 +1,3 @@
-Learning the MERN stack. (Some day it will be finished:P)
+Learning the MERN stack.
+#
 DNF ---> moved on to Python.
